@@ -1,0 +1,51 @@
+.ui.segment.grey100 {
+    background-color: #F5F5F5;
+    margin: 0 0 10px 0;
+    box-shadow: none;
+    border: none;
+}
+
+
+.hero-container {
+  min-height: 400px;
+  background-image: url(../images/hero1.jpg);
+  background-repeat: no-repeat;
+  background-size: 1700px 900px;
+  background-position: center top;
+    
+    display: flex;
+    align-items: center;
+}
+
+.banner1 {
+max-height: 160px;
+min-height: 160px;
+width:100%;
+background-image: url(../images/banner1.jpg);
+  background-repeat: no-repeat;
+  background-size: 2400px 300px;
+  background-position: center top;
+    
+    display: flex;
+    align-items: center;
+	margin-bottom: 2% !important;
+}
+
+.grey-text {
+color: #babbbc;
+}
+
+.banner-header {
+margin-left: 7rem !important;
+padding-bottom:3rem !important;
+}
+
+.filters-header
+{
+margin-bottom:0;
+}
+
+.filters-label
+{
+margin-top:3% !important;
+}
