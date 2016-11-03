@@ -1,117 +1,80 @@
-<?php 
-require 'includes/BrowsePaintingsLogic.php';
-?>
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=utf-8>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="css/semantic.js"></script>
-	<script src="js/misc.js"></script>
-    
-    <link href="css/semantic.css" rel="stylesheet" >
-    <link href="css/icon.css" rel="stylesheet" >
-    <link href="css/styles.css" rel="stylesheet">   
-</head>
-<body >
-    
-    <header>
-        <?php include 'includes/header.php';?>
-    </header>
-    
-<main>
-	<div class="ui segment stackable grid container">
-<div class="five wide column">
-<div class="row">
-<h3 class="filters-header">Filters</h3>
-<div class="ui fitted divider"></div>
-<div class="ui form">
-<form action="browse-paintings.php">
-                            <div class="field">
-                                <label class="filters-label">Artist</label>
-                                <select id="frame" class="ui search dropdown" name="artist">
-                                    <option value=''>Select Artist</option>
-                                    <?php foreach ($artists as $names) {
-									echo '<option value=' . $names['ArtistID'] . '>' . $names['FirstName'] . ' ' . $names['LastName'] . '</option>'; }?>
-									
-                                </select>
-                            </div> 
-                            <div class="field">
-                                <label>Museum</label>
-                                <select id="frame" class="ui search dropdown" name="museum">
-                                    <option value=''>Select Museum</option>
-                                    <?php foreach ($galleryName as $mNames) {
-									echo '<option value=' . $mNames['GalleryID'] . '>' . $mNames['GalleryName'] . '</option>'; }?>
-                                </select>
-                            </div> 
-                            <div class="field">
-                                <label>Select Shape</label>
-                                <select id="frame" class="ui search dropdown" name="shape">
-                                    <option value=''>None</option>
-                                    <?php foreach ($shapes as $sNames) {
-									echo '<option value=' . $sNames['ShapeID'] . '>' . $sNames['ShapeName'] . '</option>'; }?>
-                                </select>
-                            </div> 	
-                                        <button type="sumbit" value="Submit" class="ui left labeled icon orange button">
-                      <i class="filter icon"></i>
-                      Filter
-                    </button>	
-</form>					
-
-</div>
-</div>
-</div>
-  <div class="eleven wide column">
-   <h1>Paintings</h1>
-	<p>All Paintings [Showing 20]</p>
-	
-<?php 
-foreach ($info as $paintings) {
-	echo '<div class="ui two column stackable grid container">
-	<div class="four wide column"><a href="single-painting.php?id=' . $paintings['PaintingID'] . '">
-	<img src="images/art/works/square-medium/'; 
-	echo $paintings['ImageFileName'];  
-	echo '.jpg" alt="..." class="image" ></a>
-	</div>
-	<div class="twelve wide column">
-	<h3 class="ui header">
-	<div class="content">';
-	echo $paintings['Title']; 
-	echo '<div class="sub header">';
-	
-	echo $artist->getArtistName($paintings['ArtistID']);
-	echo '</div>
-	</div>
-	</h3>
-	
-	<p>';
-	echo $paintings['Description'];
-	
-	echo "</p>
-	<p>";
-	echo money_format('$%i', $info[0]['MSRP']);
-	echo '</p>
-                    <button class="ui icon orange button">
-                      <i class="add to cart icon"></i>
-                    </button>
-                    <button class="ui icon orange button">
-                      <i class="heart icon"></i>
-                    </button> 
-	
-	</div>
-	</div>';}?>
-	
-  </div>
-  </div>
-
-</main>    
-    
-
-    
-<?php include 'includes/footer.php';?>
-</body>
-</html>
+<?php
+include('header.php');
+include('functions.php');
+?>
+<main class="ui main double-margin">
+    <div class="ui segment">
+        <div class="ui grid stackable">
+            <aside class="four wide column">
+                <h3>Filters</h3>
+                <div class="ui divider"></div>
+                <h4>Artist</h4>
+                <form>
+
+                    <div class="ui selection dropdown full-width">
+                        <input type="hidden" name="artist">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Artist</div>
+                        <div class="menu">
+                            <?php
+                            echo getArtists();
+                            ?>
+                        </div>
+                    </div>
+                    <h4>Museum</h4>
+                    <div class="ui selection dropdown full-width">
+                        <input type="hidden" name="museum">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Museum</div>
+                        <div class="menu" name="museum">
+                            <?php
+                            echo getMuseums();
+                            ?>
+                        </div>
+                    </div>
+                    <h4>Shape</h4>
+                    <div class="ui selection dropdown full-width">
+                        <input type="hidden" name="shape">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Shape</div>
+                        <div class="menu">
+                            <?php
+                            echo getShapes();
+                            ?>
+                        </div>
+                    </div>
+                    <div class="ui divider hidden"></div>
+                    <button class="ui basic button" action="browse-paintings.php">
+                        <i class="icon filter"></i>
+                        Filter
+                    </button>
+                </form>
+            </aside>
+            <section class="twelve wide column">
+                <h2>Paintings</h2>
+                <div class="ui divider hidden"></div>
+                <p>
+                    
+                    <?php
+                    if (isset($_GET['artist']) && !empty($_GET['artist'])) {
+                        $html = getPaintings($_GET['artist']);
+                    }
+                    elseif (isset($_GET['museum']) && !empty($_GET['museum'])) {
+                        $html = getPaintings($_GET['museum']);
+                    }
+                    elseif (isset($_GET['shape']) && !empty($_GET['shape'])) {
+                        $html = getPaintings($_GET['shape']);
+                    }
+                    else {
+                        $html = getPaintings();
+                    }
+                    echo $html;
+                    ?>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<?php header('Content-type: text/plain');
+echo '<pre>'; print_r($paintingInfo); echo '</pre>'; ?>

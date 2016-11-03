@@ -1,67 +1,33 @@
-<?php
-require 'includes/SingleGenreLogic.php';
-?>
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=utf-8>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="css/semantic.js"></script>
-	<script src="js/misc.js"></script>
-    
-    <link href="css/semantic.css" rel="stylesheet" >
-    <link href="css/icon.css" rel="stylesheet" >
-    <link href="css/styles.css" rel="stylesheet">   
-</head>
-<body >
-    
-    <header>
-        <?php include 'includes/header.php';?>
-    </header>
-    
-<main>
-<section class="ui segment grey100">
-	<div class="ui segment stackable grid container">
-<div class="three wide column">
-<img src="images/art/genres/square-medium/1.jpg" alt="..." class="ui centered fluid image" >
-
-</div>
-  <div class="thirteen wide column">
-   <h1><?php echo $genre[0]['GenreName']; ?></h1>
-	
-	<p><?php echo $genre[0]['Description']; ?></p>
-	
-  </div>
-  </div>
-</section>
-
-<h2 class="ui horizontal divider"><i class="paint brush icon"></i>Paintings</h2>
-<div class="ui six column stackable grid container container-margin">
-<?php 
-foreach ($paintings as $paint) {
-$info = $painting->getByID($paint);
-echo '<div class="column">
-                    <div class="ui fluid card">
-                        <div class="image"> <a href="single-painting.php?id=' . $info[0]['PaintingID'] . '"><img src="images/art/works/square-medium/' . $info[0]['ImageFileName'] . '.jpg"></a> </div>
-					</div>
-	 </div>';
-
-}
-
-?>
-
-
-        </div>
-  
-  
-</main>    
-    
-
-    
-<?php include 'includes/footer.php';?>
-</body>
-</html>
+<?php
+include('header.php');
+include('functions.php');
+?>
+<section class="ui segment grey100">
+    <div class="ui container items">
+        <div class="item">
+            <div class="image">
+                <img src=<?php echo '"images/art/genres/square-medium/' . isValidGenreID($_GET['id']) . '.jpg"';?>>
+            </div>
+            <div class="content">
+                <div class="ui list ">
+                    <div class="item">
+                        <div class="">
+                            <h1><?php echo getGenreName($_GET['id']);?></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class=""><?php echo getGenreDescription($_GET['id']); ?></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<section class="ui container">
+    <h2>Paintings</h2>
+    <div class="ui divider"></div>
+    <div class="ui grid stackable">
+        <? echo getPaintingsGenre($_GET['id']); ?>
+    </div>
+</section>

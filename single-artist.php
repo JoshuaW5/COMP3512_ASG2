@@ -1,167 +1,62 @@
-<?php 
-require ('includes/SingleArtistLogic.php');
-?>
-
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=utf-8>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="css/semantic.js"></script>
-	<script src="js/misc.js"></script>
-	
-	<script type="text/javascript" src="js/slick/slick.min.js"></script>
-	
-    <link href="css/semantic.css" rel="stylesheet" >
-    <link href="css/icon.css" rel="stylesheet" >
-    <link href="css/styles.css" rel="stylesheet">   
-	
-	<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
-	
-	
-</head>
-<body >
-    
-    <header>
-        <?php include 'includes/header.php';?>
-    </header>
-
-<script>
-$(document).ready(function(){
-    $('.img-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-		autoplay:true	
-    });
-});
-</script> 
-
-<body>
-<main >
-			
-    <!-- Main section about painting -->
-    <section class="ui segment grey100">
-	
-        <div class="ui doubling stackable grid container">
-		
-            <div class="nine wide column">
-	<div class="img-slider">
-				<?php 
-for ($i = 0; $i <=4; $i++) {if ($paintings[$i]['PaintingID'] != null) {
-echo '<div class="column">
-                    <div class="ui fluid card">
-                        <div class="image"> <a href="single-painting.php?id=' . $paintings[$i]['PaintingID'] . '"><img class="ui big image" id="artwork" src="images/art/works/square-medium/' . $paintings[$i]['ImageFileName'] . '.jpg"></a> </div>
-					</div>
-	 </div>';	 }
-
-}
-
-?>
-
-</div>			
-                
-            </div>	<!-- END LEFT Picture Column --> 
-			
-            <div class="seven wide column">
-                
-                <!-- Main Info -->
-                <div class="item">
-					<h2 class="header"><?php echo $artistInfo[0]['FirstName'] . ' ' . $artistInfo[0]['LastName']; ?></h2>
-					<h3 ><?php echo $artistInfo[0]['Nationality']; ?></h3>
-					<div class="meta">
-						<?php echo $artistInfo[0]['Details']; ?>
-					</div>  
-                </div>                          
-                  
-                <!-- Tabs For Details, Museum, Genre, Subjects -->
-                <div class="ui top attached tabular menu ">
-                    <a class="active item" data-tab="details"><i class="image icon"></i>Details</a>
-                </div>
-                
-                <div class="ui bottom attached active tab segment" data-tab="details">
-                    <table class="ui definition very basic collapsing celled table">
-					  <tbody>
-						  <tr>
-						 <td>
-							  Artist
-						  </td>
-						  <td>
-							<?php echo $artistInfo[0]['FirstName'] . ' ' . $artistInfo[0]['LastName']; ?>
-						  </td>                       
-						  </tr>
-						<tr>                       
-						  <td>
-							  Nationality
-						  </td>
-						  <td>
-							<?php echo $artistInfo[0]['Nationality']; ?>
-						  </td>
-						</tr>       
-						<tr>
-						  <td>
-							  Year of Birth
-						  </td>
-						  <td>
-							<?php echo $artistInfo[0]['YearOfBirth']; ?>
-						  </td>
-						</tr>  
-						<tr>
-						  <td>
-							  Year of Death
-						  </td>
-						  <td>
-							<?php echo $artistInfo[0]['YearOfDeath']; ?>
-						  </td>
-						</tr>    
-						<tr>
-						  <td>
-							  More Information
-						  </td>
-						  <td>
-							<?php echo '<a href="' . $artistInfo[0]['ArtistLink'] . '">Click Here</a>'; ?>
-						  </td>
-						</tr> 						
-					  </tbody>
-					</table>
-                </div>                    
-                          
-            </div>	<!-- END RIGHT data Column --> 
-        </div>		<!-- END Grid --> 
-    </section>		<!-- END Main Section --> 
-
-    
-    <!-- Related Images ... will implement this in assignment 2 -->    
-    <section class="ui container">
-    <h3 class="ui horizontal divider"><i class="paint brush icon"></i> Related Works</h3>       
-	</section>  
-	
-	        <div class="ui six column stackable grid container container-margin">
-			
-			<?php 
-foreach ($paintings as $paint) {
-echo '<div class="column">
-                    <div class="ui fluid card">
-                        <div class="image"> <a href="single-painting.php?id=' . $paint['PaintingID'] . '"><img src="images/art/works/square-medium/' . $paint['ImageFileName'] . '.jpg"></a> </div>
-					</div>
-	 </div>';
-
-}
-
-?>
-        </div>
-		<br><br>
-	
-</main>    
-    
-
-    
-<?php include 'includes/footer.php';?>
-</body>
-</html>
+<?php include('header.php'); include('functions.php'); $artist = getAllArtistInfo($_GET['id']) ?>
+<div class="ui segment grey100">
+    <div class="ui doubling stackable grid container">
+        <div class="nine wide column">
+            <img src= <?php echo '"images/art/artists/medium/' . isValidArtistID($_GET['id']) .'.jpg" ' ?> alt="" class="ui big image" id='artwork'/>
+        </div>
+        <div class="seven wide column">
+            <div class="item">
+                <h2 class="header"><?php echo $artist['Name']; ?></h2>
+                <div class="ui segment">
+                    <p><?php echo $artist['Details']; ?></p>
+                </div>
+                <div class="ui bottom attached segment">
+                    <table class="ui definition very basic collapsing celled table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Nationality
+                                </td>
+                                <td>
+                                    <?php echo $artist['Nationality']; ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Gender
+                                </td>
+                                <td>
+                                    <?php echo $artist['Gender']; ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Year of Birth
+                                </td>
+                                <td>
+                                    <?php echo $artist['YearOfBirth']; ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Year of Death
+                                </td>
+                                <td>
+                                    <?php echo $artist['YearOfDeath']; ?>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href=<?php echo $artist['ArtistLink']; ?>>
+                <button class="ui labeled icon orange button">
+                    <i class="info icon"></i>
+                    Learn More
+                </button>
+            </a>
+            </div>
+            <h2>Paintings</h2>
+                <?php echo getPaintingsArtist($_GET['id']) ?>
+        </div>
+    </div>
+</div>
