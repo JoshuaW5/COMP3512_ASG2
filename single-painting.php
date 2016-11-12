@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+
 <?php 
+session_start();
+
 require 'includes/singlePaintingLogic.php';
 ?>
 <html lang=en>
@@ -21,6 +24,7 @@ require 'includes/singlePaintingLogic.php';
     
     <header>
         <?php include 'includes/header.php';?>
+		
     </header> 
     
 <main >
@@ -176,7 +180,7 @@ require 'includes/singlePaintingLogic.php';
                 
                 <!-- Cart and Price -->
                 <div class="ui raised segment">
-                    <div class="ui form">
+                    <form class="ui form" action="includes/addToCart.php">
                         <div class="ui tiny statistic">
                           <div class="value">
                             <?php echo money_format('$%i', $info[0]['MSRP']);?>
@@ -186,11 +190,11 @@ require 'includes/singlePaintingLogic.php';
                         <div class="four fields">
                             <div class="three wide field">
                                 <label>Quantity</label>
-                                <input type="number">
+                                <input type="number" name="qty">
                             </div>                               
                             <div class="four wide field">
                                 <label>Frame</label>
-                                <select id="frame" class="ui search dropdown">
+                                <select id="frame" name="frame" class="ui search dropdown">
 															<?php 
 						foreach ($frames as $names) {
 						  echo '<option>' . $names['Title'] . '</option>'; 
@@ -200,7 +204,7 @@ require 'includes/singlePaintingLogic.php';
                             </div>  
                             <div class="four wide field">
                                 <label>Glass</label>
-                                <select id="glass" class="ui search dropdown">
+                                <select id="glass" name="glass" class="ui search dropdown">
 									<?php 
 						foreach ($glassTypes as $glassNames) {
 						  echo '<option>' . $glassNames['Title'] . '</option>'; 
@@ -210,27 +214,29 @@ require 'includes/singlePaintingLogic.php';
                             </div>  
                             <div class="four wide field">
                                 <label>Matt</label>
-                                <select id="matt" class="ui search dropdown">
+                                <select id="matt" name="matt" class="ui search dropdown">
 									<?php 
 						foreach ($mattTypes as $mattNames) {
 						  echo '<option>' . $mattNames['Title'] . '</option>'; 
 						  }
 						  ?>
                                 </select>
-                            </div>           
-                        </div>                     
-                    </div>
-
+                            </div>   
+							<input type="hidden" name="ID" value="<?php echo $_GET['id'];?>">
+							<input type="hidden" name="image" value="<?php echo $info[0]['ImageFileName']; //Just give the session all the info you need for the cart, except price - we will pull directly from the DB ?>"> 
+                        </div>  
                     <div class="ui divider"></div>
 
-                    <button class="ui labeled icon orange button">
+                    <button class="ui labeled icon orange submit button">
                       <i class="add to cart icon"></i>
                       Add to Cart
                     </button>
                     <button class="ui right labeled icon button">
                       <i class="heart icon"></i>
                       Add to Favorites
-                    </button>        
+                    </button>  						
+                    </form>
+      
                 </div>     <!-- END Cart -->                      
                           
             </div>	<!-- END RIGHT data Column --> 
@@ -335,3 +341,5 @@ require 'includes/singlePaintingLogic.php';
 <?php include 'includes/footer.php';?>
 </body>
 </html>
+
+<?php print_r($_SESSION);
