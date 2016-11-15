@@ -4,7 +4,7 @@ define('DBNAME', 'art');
 define('DBUSER', getenv("C9_USER"));
 define('DBPASS', '');
 define('DBCHAR', 'utf8');
-define('PORT', '8888');
+define('PORT', '3306');
 
 // define('DBHOST', 'localhost');
 // define('DBNAME', 'art');

@@ -30,13 +30,13 @@ protected function getKeyFieldName(){return $this->keyFieldName;}
 
 public function getByPaintingID ($id) {
 
-$sql = "SELECT SubjectName FROM Subjects JOIN PaintingSubjects USING (SubjectID) WHERE PaintingID = ?";
+$sql = "SELECT DISTINCT SubjectName, SubjectID FROM Subjects JOIN PaintingSubjects USING (SubjectID) WHERE PaintingID = ?";
 
 
 
 if (count($id) > 1) {
 
-$sql = "SELECT SubjectName FROM Subjects WHERE JOIN PaintingSubjects USING (SubjectID) WHERE PaintingID IN (";
+$sql = "SELECT DISTINCT SubjectName, SubjectID FROM Subjects JOIN PaintingSubjects USING (SubjectID) WHERE PaintingID IN (";
 
 for ($i=1; $i <= count($id); $i++) {
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php 
+<?php
 session_start();
 
 require 'includes/singlePaintingLogic.php';
@@ -10,31 +10,31 @@ require 'includes/singlePaintingLogic.php';
 <meta charset=utf-8>
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="css/semantic.js"></script>
 	<script src="js/misc.js"></script>
-    
+
     <link href="css/semantic.css" rel="stylesheet" >
     <link href="css/icon.css" rel="stylesheet" >
-    <link href="css/styles.css" rel="stylesheet">   
-	
+    <link href="css/styles.css" rel="stylesheet">
+
 </head>
 <body >
-    
+
     <header>
         <?php include 'includes/header.php';?>
-		
-    </header> 
-    
+
+    </header>
+
 <main >
     <!-- Main section about painting -->
     <section class="ui segment grey100">
         <div class="ui doubling stackable grid container">
-		
+
             <div class="nine wide column">
               <img src="images/art/works/medium/<?php echo $info[0]['ImageFileName'];?>.jpg" alt="..." class="ui big image" id="artwork">
-                
+
                 <div class="ui fullscreen modal">
                   <div class="image content">
                       <img src="images/art/works/large/<?php echo $info[0]['ImageFileName'];?>.jpg" alt="..." class="image" >
@@ -42,19 +42,19 @@ require 'includes/singlePaintingLogic.php';
                       <p></p>
                     </div>
                   </div>
-                </div>                
-                
-            </div>	<!-- END LEFT Picture Column --> 
-			
+                </div>
+
+            </div>	<!-- END LEFT Picture Column -->
+
             <div class="seven wide column">
-                
+
                 <!-- Main Info -->
                 <div class="item">
 					<h2 class="header"><?php echo $info[0]['Title'];?></h2>
 					<h3 ><?php echo $artistName;?></h3>
 					<div class="meta">
 						<p>
-						
+
 						<?php
 						if (count($ratingInfo) > 0) {
 						for($i=0; $i<$ratingInfo[0]['Rating']; $i++)
@@ -67,20 +67,20 @@ require 'includes/singlePaintingLogic.php';
 						}
 						}
 						?>
-						
+
 						</p>
 						<p><?php echo $info[0]['Description'];?></p>
-					</div>  
-                </div>                          
-                  
+					</div>
+                </div>
+
                 <!-- Tabs For Details, Museum, Genre, Subjects -->
                 <div class="ui top attached tabular menu ">
                     <a class="active item" data-tab="details"><i class="image icon"></i>Details</a>
                     <a class="item" data-tab="museum"><i class="university icon"></i>Museum</a>
                     <a class="item" data-tab="genres"><i class="theme icon"></i>Genres</a>
-                    <a class="item" data-tab="subjects"><i class="cube icon"></i>Subjects</a>    
+                    <a class="item" data-tab="subjects"><i class="cube icon"></i>Subjects</a>
                 </div>
-                
+
                 <div class="ui bottom attached active tab segment" data-tab="details">
                     <table class="ui definition very basic collapsing celled table">
 					  <tbody>
@@ -90,16 +90,16 @@ require 'includes/singlePaintingLogic.php';
 						  </td>
 						  <td>
 							<a href="single-artist.php?id=<?php echo $info[0]['ArtistID'];?>"><?php echo $artistName;?></a>
-						  </td>                       
+						  </td>
 						  </tr>
-						<tr>                       
+						<tr>
 						  <td>
 							  Year
 						  </td>
 						  <td>
 							<?php echo $info[0]['YearOfWork'];?>
 						  </td>
-						</tr>       
+						</tr>
 						<tr>
 						  <td>
 							  Medium
@@ -107,7 +107,7 @@ require 'includes/singlePaintingLogic.php';
 						  <td>
 							<?php echo $info[0]['Medium'];?>
 						  </td>
-						</tr>  
+						</tr>
 						<tr>
 						  <td>
 							  Dimensions
@@ -115,11 +115,11 @@ require 'includes/singlePaintingLogic.php';
 						  <td>
 							<?php echo $info[0]['Width'] . " cm x " . $info[0]['Height'] . " cm ";?>
 						  </td>
-						</tr>        
+						</tr>
 					  </tbody>
 					</table>
                 </div>
-				
+
                 <div class="ui bottom attached tab segment" data-tab="museum">
                     <table class="ui definition very basic collapsing celled table">
                       <tbody>
@@ -130,7 +130,7 @@ require 'includes/singlePaintingLogic.php';
                           <td>
                             <?php echo $galleryName;?>
                           </td>
-                        </tr>       
+                        </tr>
                         <tr>
                           <td>
                               Assession #
@@ -138,7 +138,7 @@ require 'includes/singlePaintingLogic.php';
                           <td>
                             <?php echo $info[0]['AccessionNumber'];?>
                           </td>
-                        </tr>  
+                        </tr>
                         <tr>
                           <td>
                               Copyright
@@ -146,7 +146,7 @@ require 'includes/singlePaintingLogic.php';
                           <td>
                             <?php echo $info[0]['CopyrightText'];?>
                           </td>
-                        </tr>       
+                        </tr>
                         <tr>
                           <td>
                               URL
@@ -154,77 +154,77 @@ require 'includes/singlePaintingLogic.php';
                           <td>
                             <a href="<?php echo $info[0]['MuseumLink'];?>">View painting at museum site</a>
                           </td>
-                        </tr>        
+                        </tr>
                       </tbody>
-                    </table>    
-                </div>     
+                    </table>
+                </div>
                 <div class="ui bottom attached tab segment" data-tab="genres">
- 
+
                         <ul class="ui list">
-							<?php 
-							echo '<li class="item"><a href="single-genre.php?id=' . $genres[0]['GenreID'] . '">' . $genres[0]['GenreName'] . '</a></li>'; 
+							<?php
+							echo '<li class="item"><a href="single-genre.php?id=' . $genres[0]['GenreID'] . '">' . $genres[0]['GenreName'] . '</a></li>';
 							?>
-							
+
                         </ul>
 
-                </div>  
+                </div>
                 <div class="ui bottom attached tab segment" data-tab="subjects">
                     <ul class="ui list">
-						<?php 
+						<?php
 						foreach ($subjects as $subject) {
-						  echo '<li class="item"><a href="#">' . $subject['SubjectName'] . '</a></li>'; 
+						  echo '<li class="item"><a href="single-subject.php?id=' . $subject['SubjectID'] . '">' . $subject['SubjectName'] . '</a></li>'; 
 						  }
 						  ?>
                         </ul>
-                </div>  
-                
+                </div>
+
                 <!-- Cart and Price -->
                 <div class="ui raised segment">
                     <form class="ui form" action="includes/addToCart.php">
                         <div class="ui tiny statistic">
                           <div class="value">
                             <?php echo money_format('$%i', $info[0]['MSRP']);?>
-							
+
                           </div>
                         </div>
                         <div class="four fields">
                             <div class="three wide field">
                                 <label>Quantity</label>
                                 <input type="number" name="qty">
-                            </div>                               
+                            </div>
                             <div class="four wide field">
                                 <label>Frame</label>
                                 <select id="frame" name="frame" class="ui search dropdown">
-															<?php 
+															<?php
 						foreach ($frames as $names) {
-						  echo '<option>' . $names['Title'] . '</option>'; 
+						  echo '<option>' . $names['Title'] . '</option>';
 						  }
 						  ?>
                                 </select>
-                            </div>  
+                            </div>
                             <div class="four wide field">
                                 <label>Glass</label>
                                 <select id="glass" name="glass" class="ui search dropdown">
-									<?php 
+									<?php
 						foreach ($glassTypes as $glassNames) {
-						  echo '<option>' . $glassNames['Title'] . '</option>'; 
+						  echo '<option>' . $glassNames['Title'] . '</option>';
 						  }
 						  ?>
                                 </select>
-                            </div>  
+                            </div>
                             <div class="four wide field">
                                 <label>Matt</label>
                                 <select id="matt" name="matt" class="ui search dropdown">
-									<?php 
+									<?php
 						foreach ($mattTypes as $mattNames) {
-						  echo '<option>' . $mattNames['Title'] . '</option>'; 
+						  echo '<option>' . $mattNames['Title'] . '</option>';
 						  }
 						  ?>
                                 </select>
-                            </div>   
+                            </div>
 							<input type="hidden" name="ID" value="<?php echo $_GET['id'];?>">
-							<input type="hidden" name="image" value="<?php echo $info[0]['ImageFileName']; //Just give the session all the info you need for the cart, except price - we will pull directly from the DB ?>"> 
-                        </div>  
+							<input type="hidden" name="image" value="<?php echo $info[0]['ImageFileName']; //Just give the session all the info you need for the cart, except price - we will pull directly from the DB ?>">
+                        </div>
                     <div class="ui divider"></div>
 
                     <button class="ui labeled icon orange submit button">
@@ -234,29 +234,29 @@ require 'includes/singlePaintingLogic.php';
                     <button class="ui right labeled icon button">
                       <i class="heart icon"></i>
                       Add to Favorites
-                    </button>  						
+                    </button>
                     </form>
-      
-                </div>     <!-- END Cart -->                      
-                          
-            </div>	<!-- END RIGHT data Column --> 
-        </div>		<!-- END Grid --> 
-    </section>		<!-- END Main Section --> 
-    
+
+                </div>     <!-- END Cart -->
+
+            </div>	<!-- END RIGHT data Column -->
+        </div>		<!-- END Grid -->
+    </section>		<!-- END Main Section -->
+
     <!-- Tabs for Description, On the Web, Reviews -->
     <section class="ui doubling stackable grid container">
         <div class="sixteen wide column">
-        
+
             <div class="ui top attached tabular menu ">
               <a class="active item" data-tab="first">Description</a>
               <a class="item" data-tab="second">On the Web</a>
               <a class="item" data-tab="third">Reviews</a>
             </div>
-			
+
             <div class="ui bottom attached active tab segment" data-tab="first">
               <?php echo $info[0]['Description'];?>
-            </div>	<!-- END DescriptionTab --> 
-			
+            </div>	<!-- END DescriptionTab -->
+
             <div class="ui bottom attached tab segment" data-tab="second">
 				<table class="ui definition very basic collapsing celled table">
                   <tbody>
@@ -266,37 +266,37 @@ require 'includes/singlePaintingLogic.php';
                       </td>
                       <td>
                         <a href="<?php echo $info[0]['WikiLink'];?>">View painting on Wikipedia</a>
-                      </td>                       
-                      </tr>                       
-                      
+                      </td>
+                      </tr>
+
                       <tr>
                      <td>
                           Google Link
                       </td>
                       <td>
                         <a href="<?php echo $info[0]['GoogleLink'];?>">View painting on Google Art Project</a>
-                      </td>                       
+                      </td>
                       </tr>
-                      
+
                       <tr>
                      <td>
                           Google Text
                       </td>
                       <td>
                         <?php echo $info[0]['GoogleDescription'];?>
-                      </td>                       
-                      </tr>                      
-                      
-   
-       
+                      </td>
+                      </tr>
+
+
+
                   </tbody>
                 </table>
-            </div>   <!-- END On the Web Tab --> 
+            </div>   <!-- END On the Web Tab -->
 			<div class="ui bottom attached tab segment" data-tab="third">
-			
+
 <?php foreach($ratingInfo as $rating) {
             echo '<div class="ui feed">
-					
+
 				  <div class="event">
 					<div class="content">
 						<div class="date">';
@@ -313,31 +313,31 @@ require 'includes/singlePaintingLogic.php';
 							echo "<i class='empty star icon'></i>";
 						}
 							echo '</a>
-						</div>                    
+						</div>
 						<div class="summary">';
-							echo $ratingInfo[0]['Comment'];       
-						echo '</div>       
+							echo $ratingInfo[0]['Comment'];
+						echo '</div>
 					</div>
 				  </div>
-					
-				<div class="ui divider"></div>';
-}?>		
-								
-				</div>                                
-            </div>   <!-- END Reviews Tab -->          
-        
-        </div>        
-    </section> <!-- END Description, On the Web, Reviews Tabs --> 
-    
-    <!-- Related Images ... will implement this in assignment 2    
-    <section class="ui container">
-    <h3 class="ui dividing header">Related Works</h3>        
-	</section> -->
-	
-</main>    
-    
 
-    
+				<div class="ui divider"></div>';
+}?>
+
+				</div>
+            </div>   <!-- END Reviews Tab -->
+
+        </div>
+    </section> <!-- END Description, On the Web, Reviews Tabs -->
+
+    <!-- Related Images ... will implement this in assignment 2
+    <section class="ui container">
+    <h3 class="ui dividing header">Related Works</h3>
+	</section> -->
+
+</main>
+
+
+
 <?php include 'includes/footer.php';?>
 </body>
 </html>
