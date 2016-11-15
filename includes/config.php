@@ -1,7 +1,7 @@
 <?php
-define('DBHOST', 'localhost');
+define('DBHOST', getenv("IP"));
 define('DBNAME', 'art');
-define('DBUSER', 'testuser');
-define('DBPASS', 'mypassword');
+define('DBUSER', getenv("C9_USER"));
+define('DBPASS', '');
 define('DBCHAR', 'utf8');
 ?>

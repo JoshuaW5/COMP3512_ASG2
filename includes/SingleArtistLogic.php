@@ -47,7 +47,7 @@ $artistInfo = $artist->findByID($id);
 
 
 
-$paintings = $painting->findByID($id);
+$paintings = $painting->getByArtist($id);
 
 
 

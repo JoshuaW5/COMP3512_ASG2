@@ -13,9 +13,11 @@ class DBHelper {
         $pass = $values['pass'];
 
         $charset = $values['charset'];
+        
+        $port = 3306; //needed for c9 db access
 
 
-        $conString = "mysql:host=" . $host . ";dbname=" . $db . ";charset=" . $charset;
+        $conString = "mysql:host=" . $host . ";port=" . $port . ";dbname=" . $db . ";charset=" . $charset;
         $pdo = new PDO($conString, $user, $pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
