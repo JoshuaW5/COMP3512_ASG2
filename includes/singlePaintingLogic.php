@@ -102,6 +102,7 @@ $genres = $genre->findByID($genres);
 
 
 $subjects = $paintingSubject->getByPaintingID($id);
+
 $subjects = $subject->getByPaintingID($subjects);
 
 
