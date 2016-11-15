@@ -6,9 +6,8 @@ include 'includes/PaintingDB.php';
 
 include 'includes/DataAccess.php';
 
-include 'includes/config.php';
 
-$dataObj = DBHelper::setConnectionInfo(Array("host"=>DBHOST, "database"=>DBNAME, "user"=>DBUSER, "pass"=>DBPASS, "charset"=>DBCHAR));
+$dataObj = DBHelper::setConnectionInfo();
 
 
 $subject = new SubjectDB($dataObj);

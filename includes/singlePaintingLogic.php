@@ -28,12 +28,10 @@ include 'includes/GlassDB.php';
 
 include 'includes/MattDB.php';
 
-include 'includes/config.php';
-
 include 'includes/DataAccess.php';
 
 
-$dataObj = DBHelper::setConnectionInfo(Array("host"=>DBHOST, "database"=>DBNAME, "user"=>DBUSER, "pass"=>DBPASS, "charset"=>DBCHAR));
+$dataObj = DBHelper::setConnectionInfo();
 
 
 
@@ -104,7 +102,6 @@ $genres = $genre->findByID($genres);
 
 
 $subjects = $paintingSubject->getByPaintingID($id);
-
 $subjects = $subject->getByPaintingID($subjects);
 
 

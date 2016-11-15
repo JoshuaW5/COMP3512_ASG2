@@ -2,23 +2,24 @@
 
 class DBHelper {
 
-    public static function setConnectionInfo($values=Array()) {
+    public static function setConnectionInfo() {
 
-        $host=$values['host'];
+        // $host=$values['host'];
+        //
+        // $db = $values['database'];
+        //
+        // $user = $values['user'];
+        //
+        // $pass = $values['pass'];
+        //
+        // $charset = $values['charset'];
+        //
+        // $port = $values['charset']; //needed for c9 db access
 
-        $db = $values['database'];
+        include 'includes/config.php';
 
-        $user = $values['user'];
-
-        $pass = $values['pass'];
-
-        $charset = $values['charset'];
-        
-        $port = 3306; //needed for c9 db access
-
-
-        $conString = "mysql:host=" . $host . ";port=" . $port . ";dbname=" . $db . ";charset=" . $charset;
-        $pdo = new PDO($conString, $user, $pass);
+        $conString = "mysql:host=" . DBHOST . ";port=" . PORT . ";dbname=" . DBNAME . ";charset=" . CHARSET;
+        $pdo = new PDO($conString, DBUSER, DBPASS);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         return $pdo;

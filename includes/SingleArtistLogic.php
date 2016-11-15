@@ -6,10 +6,8 @@ include 'includes/ArtistDB.php';
 
 include 'includes/DataAccess.php';
 
-include 'includes/config.php';
 
-
-$dataObj = DBHelper::setConnectionInfo(Array("host"=>DBHOST, "database"=>DBNAME, "user"=>DBUSER, "pass"=>DBPASS, "charset"=>DBCHAR));
+$dataObj = DBHelper::setConnectionInfo();
 
 $artist = new ArtistDB($dataObj);
 

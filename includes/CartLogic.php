@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 
@@ -12,7 +12,7 @@ public function displayCart() {
 
 
 
-$dataAccess = DBHelper::setConnectionInfo(Array("host"=>DBHOST, "database"=>DBNAME, "user"=>DBUSER, "pass"=>DBPASS , "charset"=>DBCHAR));
+$dataAccess = DBHelper::setConnectionInfo();
 
 
 
@@ -69,27 +69,27 @@ $info = $painting->findById($item['id']); //Info about painting
 
 	  	  <form id="form1" class="ui form" action="' . $this->changeCart() . '">
 
-	                          <div class="three fields">                              
+	                          <div class="three fields">
 
                             <div class="five wide field">
 
                                 <label>Frame</label>
 
-                                <select onchange="changeCart()" id="frame" name="frame" class="ui search dropdown">'; 
+                                <select onchange="changeCart()" id="frame" name="frame" class="ui search dropdown">';
 
 						  						foreach ($frames as $names) {
 
-						  echo "<option>" . $names["Title"] . "</option>"; 
+						  echo "<option>" . $names["Title"] . "</option>";
 
 						  }
 
-						  
 
-						  
+
+
 
 	echo '</select>
 
-                            </div>  
+                            </div>
 
                             <div class="five wide field">
 
@@ -99,7 +99,7 @@ $info = $painting->findById($item['id']); //Info about painting
 
 															foreach ($glassTypes as $glassNames) {
 
-						  echo '<option>' . $glassNames['Title'] . '</option>'; 
+						  echo '<option>' . $glassNames['Title'] . '</option>';
 
 						  }
 
@@ -107,31 +107,31 @@ $info = $painting->findById($item['id']); //Info about painting
 
                                 '</select>
 
-                            </div>  
+                            </div>
 
                             <div class="five wide field">
 
                                 <label>Matt</label>
 
-                                <select onchange="changeCart()" id="matt" name="matt" class="ui search dropdown">'; 
+                                <select onchange="changeCart()" id="matt" name="matt" class="ui search dropdown">';
 
 															foreach ($mattTypes as $mattNames) {
 
-						  echo '<option>' . $mattNames['Title'] . '</option>'; 
+						  echo '<option>' . $mattNames['Title'] . '</option>';
 
 						  }
 
 echo '</select>
 
-                            </div>   
+                            </div>
 
-                        </div> 
+                        </div>
 
 						</div>
 
 	  </td>
 
-	  <td>	  
+	  <td>
 
 	  <form class="ui form" action="includes/addToCart.php">
 
@@ -139,7 +139,7 @@ echo '</select>
 
                                 <input onchange="changeCart()" type="number" name="qty" value="' . $item["qty"] . '">
 
-                            </div>                      
+                            </div>
 
 	  </form>
 
