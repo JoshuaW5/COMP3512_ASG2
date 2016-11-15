@@ -29,18 +29,16 @@ require 'includes/BrowseGenresLogic.php';
         </div>
 
         <div class="ui six column stackable grid container container-margin">
-		
-		<?php 
-		//EraID did not contain the correct paths for images but GenreID did. Hence the use of GenreID
-		foreach ($genres as $info){ 
+
+		<?php
+		foreach ($genres as $info){
 			echo '<div class="column">
 					<div class="ui fluid card">
 						<div class="image"><img src="images/art/genres/square-medium/' . $info['GenreID'] . '.jpg"></div>
 						<div class="content">
 							<a href="single-genre.php?id=' . $info['GenreID'] . '"><h4>' . $info['GenreName'] . '</h4></a>
 						</div></div></div>';
-		}
-						
+		}
 		?>
 
         </div>

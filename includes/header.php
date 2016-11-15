@@ -1,4 +1,4 @@
-<?php 
+<?php
 echo '<div class="ui attached stackable grey inverted  menu">
             <div class="ui container">
                 <nav class="right menu">
@@ -19,7 +19,7 @@ echo '<div class="ui attached stackable grey inverted  menu">
                 <a class="item"> <i class="home icon"></i> Blog </a>
                 <div class="ui simple dropdown item">
                     <i class="grid layout icon"></i> Browse <i class="dropdown icon"></i>
-                    <div class="menu"> <a class="item" href="browse-artists.php"><i class="users icon"></i> Artists</a> <a class="item" href="browse-genres.php"><i class="theme icon"></i> Genres</a> <a class="item" href="browse-paintings.php"><i class="paint brush icon"></i> Paintings</a> <a class="item"><i class="cube icon"></i> Subjects</a> </div>
+                    <div class="menu"> <a class="item" href="browse-artists.php"><i class="users icon"></i> Artists</a> <a class="item" href="browse-genres.php"><i class="theme icon"></i> Genres</a> <a class="item" href="browse-paintings.php"><i class="paint brush icon"></i>Paintings</a> <a class="item" href="browse-subjects.php"><i class="cube icon"></i> Subjects</a> </div>
                 </div>
                 <div class="right item">
                     <div class="ui mini icon input">

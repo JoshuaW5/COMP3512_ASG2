@@ -1,53 +1,70 @@
-<?php 
-
-class DataAccess {
-
-private $pdo;
-
-public function connect() {
-try{
-$host='localhost';
-$db = '3512asg1';
-$user = 'jwoja063';
-$pass = 'mkye9y2ka';
-$charset = 'utf8';
-
-$conString = "mysql:host=$host;dbname=$db;charset=$charset";
-$pdo = new PDO($conString, $user, $pass);
-
-$this->pdo = $pdo;
-}
-catch(PDOException $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
-    }
-}
-
-static function runQuery($pdo, $sql, $parameters=Array()) {
-
-if (!is_array($parameters)) {
-	$parameters = Array($parameters); 
-}
-try {
-	$statement=null;
-	if(count($parameters)>0) {
-	$statement = $pdo->prepare($sql);
-	$statement->execute($parameters);
-	}
-	$statement = $statement->fetchAll();
-	//echo print_r($statement);
-	return $statement;
-	}
-catch(PDOException $e)
-	{
-	echo "Connection failed: " . $e->getMessage();
-	}
-}
-
-public function getPDO()
-{
-return $this->pdo;
-}
-
-}
+<?php
+
+class DBHelper {
+
+    public static function setConnectionInfo($values=Array()) {
+
+        $host=$values['host'];
+
+        $db = $values['database'];
+
+        $user = $values['user'];
+
+        $pass = $values['pass'];
+
+        $charset = $values['charset'];
+
+
+        $conString = "mysql:host=" . $host . ";dbname=" . $db . ";charset=" . $charset;
+        $pdo = new PDO($conString, $user, $pass);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $pdo;
+    }
+
+
+    public static function runQuery(PDO $pdo, $sql, $parameters=Array()) {
+
+        if(!is_array($parameters)){
+
+            $parameters = Array($parameters);
+        }
+
+        try{
+
+
+            $statement=null;
+            if(!empty($parameters)){
+                $statement = $pdo->prepare($sql);
+
+                $statement->execute($parameters);
+
+            }
+
+            else{
+                $statement=$pdo->query($sql);
+
+            }
+            $list = Array();
+            while ($row = $statement->fetch()) {
+                array_push($list, $row);
+            }
+            //Used for viewing the array of query
+            // print "<pre>";
+            // print_r($list);
+            // print "</pre>";
+            $pdo = null;
+            return $list;
+
+        } catch (PDOException $e){
+
+            echo ("<br>" . $e . "<br>");
+
+        }
+
+
+    }
+
+}
+
 ?>
