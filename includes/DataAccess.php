@@ -1,6 +1,9 @@
 <?php
 
+        include 'includes/config.php';
+
 class DBHelper {
+    
 
     public static function setConnectionInfo() {
 
@@ -16,7 +19,7 @@ class DBHelper {
         //
         // $port = $values['charset']; //needed for c9 db access
 
-        include 'includes/config.php';
+
 
         $conString = "mysql:host=" . DBHOST . ";port=" . PORT . ";dbname=" . DBNAME . ";charset=" . CHARSET;
         $pdo = new PDO($conString, DBUSER, DBPASS);

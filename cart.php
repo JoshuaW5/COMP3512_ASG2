@@ -3,6 +3,7 @@
 session_start();
 require 'includes/CartLogic.php';
 require 'includes/singlePaintingLogic.php';
+//require 'includes/config.php';
 
 $cart = new CartLogic();
 ?>
