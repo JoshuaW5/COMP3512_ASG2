@@ -27,7 +27,7 @@ require 'includes/SingleGenreLogic.php';
 <section class="ui segment grey100">
 	<div class="ui segment stackable grid container">
 <div class="three wide column">
-<img src="images/art/genres/square-medium/.jpg" alt="..." class="ui centered fluid image" >
+<?php echo '<img src="images/art/genres/square-medium/' . $genre[0]['GenreID'] . '.jpg" alt="..." class="ui centered fluid image">' ?>
 
 </div>
   <div class="thirteen wide column">

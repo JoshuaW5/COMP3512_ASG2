@@ -64,18 +64,17 @@ require 'includes/browseSubjectsLogic.php';
 
 		<?php
 		foreach ($subjects as $info){
-            //var_dump(getImageForSubject($info['SubjectID'], $painting));
 			echo '<div class="column">
-
+                    <a href="single-subject.php?id=' . $info['SubjectID'] . '">
 					<div class="ui fluid card">
 
 						<div class="image"><img src="images/art/works/square-medium/' . getImageForSubject($info['SubjectID'], $painting)[0]['ImageFileName'] . '.jpg"></div>
 
 						<div class="content">
 
-							<a href="single-subject.php?id=' . $info['SubjectID'] . '"><h4>' . $info['SubjectName'] . '</h4></a>
+							<h4>' . $info['SubjectName'] . '</h4>
 
-						</div></div></div>';
+						</div></div></a></div>';
 
 		}
 

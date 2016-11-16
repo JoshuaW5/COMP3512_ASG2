@@ -50,39 +50,47 @@ require 'includes/SingleSubjectLogic.php';
 
     <main>
 
-        <div class="banner1">
+        <section class="ui segment grey100">
 
-            <h1 class="ui huge header banner-header">Genres</h1>
+            <div class="ui segment stackable grid container">
 
-        </div>
+                <div class="three wide column">
+
+                    <?php echo '<img src="images/art/works/square-medium/' . $paintings[0]['ImageFileName'] . '.jpg" alt="..." class="ui centered fluid image">' ?>
+
+
+
+                </div>
+
+                <div class="thirteen wide column">
+
+                    <h1><?php echo $subject[0]['SubjectName']; ?></h1>
+
+
+
+
+                </div>
+
+            </div>
+
+        </section>
 
 
 
         <div class="ui six column stackable grid container container-margin">
 
+            <h2 class="ui horizontal divider"><i class="paint brush icon"></i>Paintings</h2>
 
+            <?php
 
-		<?php
+            foreach ($paintings as $painting){
+                echo '<div class="column"><div class="image"><a href="single-painting.php?id=' . $painting['PaintingID'] . '"><img src="images/art/works/square-medium/' . $painting['ImageFileName'] . '.jpg"></a></div></div>';
 
-		foreach ($genres as $info){
-
-			echo '<div class="column">
-
-					<div class="ui fluid card">
-
-						<div class="image"><img src="images/art/genres/square-medium/' . $info['GenreID'] . '.jpg"></div>
-
-						<div class="content">
-
-							<a href="single-genre.php?id=' . $info['GenreID'] . '"><h4>' . $info['GenreName'] . '</h4></a>
-
-						</div></div></div>';
-
-		}
+            }
 
 
 
-		?>
+            ?>
 
 
 
@@ -96,7 +104,7 @@ require 'includes/SingleSubjectLogic.php';
 
 
 
-<?php include 'includes/footer.php';?>
+    <?php include 'includes/footer.php';?>
 
 </body>
 

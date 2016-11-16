@@ -154,6 +154,12 @@ public function getPaintingBySubject($id){
     return $result;
 }
 
+public function getPaintingsBySubject($id){
+    $sql = $this->getSelect() . " JOIN PaintingSubjects USING (PaintingID) JOIN Subjects USING(SubjectID) WHERE SubjectID = ?";
+    $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+    return $result;
+}
+
 
 
 

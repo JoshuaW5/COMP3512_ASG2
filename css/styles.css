@@ -6,13 +6,17 @@
 }
 
 
+.full-width{
+    width: 100%;
+}
+
 .hero-container {
   min-height: 400px;
   background-image: url(../images/hero1.jpg);
   background-repeat: no-repeat;
   background-size: 1700px 900px;
   background-position: center top;
-    
+
     display: flex;
     align-items: center;
 }
@@ -25,7 +29,7 @@ background-image: url(../images/banner1.jpg);
   background-repeat: no-repeat;
   background-size: 2400px 300px;
   background-position: center top;
-    
+
     display: flex;
     align-items: center;
 	margin-bottom: 2% !important;
