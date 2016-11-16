@@ -69,7 +69,7 @@ require 'includes/singlePaintingLogic.php';
 						?>
 
 						</p>
-						<p><?php echo $info[0]['Description'];?></p>
+						<p><?php echo $info[0]['Excerpt'];?></p>
 					</div>
                 </div>
 

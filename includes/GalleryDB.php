@@ -36,6 +36,17 @@ return $gallery[0]['GalleryName'];
 
 }
 
+public function getAllMuseumSorted() {
+
+$sql = "SELECT GalleryID, GalleryName FROM Galleries ORDER BY GalleryName";
+
+$result = DBHelper::runQuery($this->getConnection(), $sql, null);
+
+return $result;
+
+
+}
+
 
 
 }

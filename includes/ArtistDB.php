@@ -36,7 +36,16 @@ return $result[0]['FirstName'] . " " . $result[0]['LastName'];
 
 }
 
+public function getAllArtistNameSorted() {
 
+$sql = "SELECT ArtistID, FirstName, LastName FROM Artists ORDER BY LastName";
+
+$result = DBHelper::runQuery($this->getConnection(), $sql, null);
+
+return $result;
+
+
+}
 
 
 

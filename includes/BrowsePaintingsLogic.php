@@ -32,11 +32,11 @@ $shape = new ShapeDB($dataObj);
 
 
 
-$artists = $artist->getAll();
+$artists = $artist->getAllArtistNameSorted();
 
-$galleryName = $gallery->getAll();
+$galleryName = $gallery->getAllMuseumSorted();
 
-$shapes = $shape->getAll();
+$shapes = $shape->getAllShapesSorted();
 
 
 

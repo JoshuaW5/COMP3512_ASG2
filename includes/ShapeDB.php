@@ -40,6 +40,17 @@ return $result;
 
 }
 
+public function getAllShapesSorted() {
+
+$sql = "SELECT ShapeID, ShapeName FROM Shapes ORDER BY ShapeName";
+
+$result = DBHelper::runQuery($this->getConnection(), $sql, null);
+
+return $result;
+
+
+}
+
 
 
 }

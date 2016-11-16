@@ -4,6 +4,7 @@ abstract class AbstractDB{
     private $connection;
     protected $keyFieldName;
     protected $baseSQL;
+    protected $orderBy;
 
     public function __construct(PDO $connect){
         $this->connection=$connect;
@@ -18,15 +19,17 @@ abstract class AbstractDB{
     }
 
     public function getAll(){
-        $statement = DBHelper::runQuery($this->getConnection(), $this->getSelect(), NULL);
-        return $statement;
+        return $this->getStatement($this->getSelect(), NULL);
 
     }
 
     public function findByID($id){
         $sql = $this->getSelect() . " WHERE " . $this->getKeyFieldName() . " = ?";
-        $statement = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
-        return $statement;
+        return $this->getStatement($sql, $id);
+    }
+    
+    private function getStatement($sql, $id) {
+        return DBHelper::runQuery($this->getConnection(), $sql, Array($id));
     }
 
 }
