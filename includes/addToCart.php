@@ -52,10 +52,7 @@ $product['matt'] = '[None]';
 $_SESSION['cart'][$id] = $product;
 
 
-
-echo print_r($_SESSION['cart']);
-
-//header('Location: ../cart.php');
+header('Location: ../cart.php');
 
 }
 
