@@ -11,7 +11,9 @@ $dataObj = DBHelper::setConnectionInfo();
 $galleryDB = new GalleryDB($dataObj);
 
 
-$galleries = $galleryDB->getAll();
+$galleries = $galleryDB->getAllSortByGalleryName();
+
+//$galleries = $galleryDB->getAllSortedByID('GalleryName', 'ASC');
 
 
 
