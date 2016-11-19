@@ -109,15 +109,15 @@ $subjects = $subject->getByPaintingID($subjects);
 
 
 
-$frames = $frame->getAllNames(); //Doesn't require an ID.
+$frames = $frame->getCartInfo(); //Doesn't require an ID.
 
 
 
-$glassTypes = $glass->getAllNames(); //Doesn't require an ID.
+$glassTypes = $glass->getCartInfo(); //Doesn't require an ID.
 
 
 
-$mattTypes = $matt->getAllNames(); //Doesn't require an ID.
+$mattTypes = $matt->getCartInfo(); //Doesn't require an ID.
 
 
 

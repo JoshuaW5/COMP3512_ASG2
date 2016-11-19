@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <?php 
+
+ini_set('error_reporting', E_ALL);
+
+ini_set('display_errors', 'On');
 session_start();
+//session_destroy();
+
+
 require 'includes/CartLogic.php';
 require 'includes/singlePaintingLogic.php';
 //require 'includes/config.php';
@@ -41,15 +48,51 @@ $cart = new CartLogic();
 	<th class="two wide">Price</th>
   </tr></thead>
   <tbody>
+
  <?php $cart->displayCart();?>
   </tbody>
   <tfoot>
-    <tr><th>3 People</th>
-    <th>2 Approved</th>
-	<th>Approved</th>
-	<th>Approved</th>
-	<th>Approved</th>
-  </tr></tfoot>
+    <tr>
+	<th></th>
+		<th></th>
+		<th></th>
+		<th>Subtotal</th>
+		<th><?php echo $cart->getCartSubTotal(); ?></th>
+	</tr>
+	<tr>
+    <th></th>
+	<th></th>
+	<th>
+	Orders over $1500 qualifies for free shipping. <br>Orders over $2500 qualifies for free express shipping.
+	</th>
+	<th class="six wide">
+                                <select style="width: 100%" id="shipping" name="shipping" class="ui search dropdown" >
+								<option selected="true" value="no" disabled>Choose a shipping option</option>
+								<option value="standard" >Standard Shipping - $25.00</option>
+								<option value="express" >Express Shipping - $50.00</option>
+                                </select>
+								</th>
+	<th><?php echo $cart->shippingTotal(); ?></th>
+	</tr>
+	      <tr>
+	<th></th>
+		<th></th>
+		<th></th>
+		<th>Total</th>
+		<th><?php echo $cart->getCartTotal(); ?></th>
+	</tr>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th></th>
+	<th>                     <button class="ui labeled icon orange submit button">
+                      <i class="add to cart icon"></i>
+                      Update Cart
+                    </button></th>
+					<input type="hidden" name="update" value="1">
+					</form>
+  </tr>
+	</tfoot>
 </table>
 </div>
 
@@ -62,10 +105,3 @@ $cart = new CartLogic();
 <?php include 'includes/footer.php';?>
 </body>
 </html>
-
-<script>
-function changeCart(){
-    document.getElementById("form1").submit();
-	alert("hiii");
-}
-</script>
