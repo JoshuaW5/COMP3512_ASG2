@@ -5,8 +5,8 @@
                 <i class="user icon"></i> Account <i class="dropdown icon"></i>
                 <div class="menu"> <a class="item"><i class="sign in icon"></i> Login</a> <a class="item"><i class="edit icon"></i> Edit Profile</a> <a class="item"><i class="globe icon"></i> Choose Language</a> <a class="item"><i class="settings icon"></i> Account Settings</a> </div>
             </div>
-            <a class=" item"> <i class="heartbeat icon"></i> Favorites </a>
-            <a class=" item"> <i class="shop icon"></i> Cart </a>
+            <a href="favorites.php" class=" item"> <i class="heartbeat icon"></i> Favorites </a>
+            <a href="cart.php" class=" item"> <i class="shop icon"></i> Cart </a>
         </nav>
     </div>
 </div>
@@ -42,8 +42,12 @@
             </div>
         </div>
         <div class="right item">
+		<form class="ui form" action="browse-paintings.php">
             <div class="ui mini icon input">
-                <input type="text" placeholder="Search ..."> <i class="search icon"></i> </div>
+			
+                <input type="text" name="search" placeholder="Search ..."> <i class="search icon"></i> </div>
+
             </div>
+							</form>
         </div>
     </div>
