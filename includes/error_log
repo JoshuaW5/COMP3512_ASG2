@@ -10,3 +10,11 @@
 [19-Nov-2016 00:05:45 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToCart.php on line 54
 [19-Nov-2016 00:05:57 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToCart.php on line 54
 [19-Nov-2016 00:09:10 UTC] PHP Parse error:  syntax error, unexpected ''Location: ../cart.php);' (T_ENCAPSED_AND_WHITESPACE) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToCart.php on line 58
+[19-Nov-2016 22:45:18 UTC] PHP Notice:  Undefined index: ID in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 38
+[19-Nov-2016 22:45:18 UTC] PHP Notice:  Undefined index: ID in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 40
+[19-Nov-2016 22:46:10 UTC] PHP Notice:  Undefined index: ID in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 38
+[19-Nov-2016 22:46:10 UTC] PHP Notice:  Undefined index: ID in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 40
+[19-Nov-2016 22:47:35 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 46
+[19-Nov-2016 22:47:40 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 46
+[19-Nov-2016 22:47:41 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 46
+[19-Nov-2016 22:47:41 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 46
