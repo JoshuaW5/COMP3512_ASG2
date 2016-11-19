@@ -29,9 +29,9 @@ protected function getSelect(){return $this->baseSQL;}
 
 protected function getKeyFieldName(){return $this->keyFieldName;}
 
-public function getAllNames() {
+public function getCartInfo() {
 
-$sql = "SELECT Title FROM TypesGlass";
+$sql = "SELECT Title, Price FROM TypesGlass";
 
 $result = DBHelper::runQuery($this->getConnection(), $sql, null);
 
