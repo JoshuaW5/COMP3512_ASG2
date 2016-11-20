@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 require 'includes/browseSubjectsLogic.php';
 

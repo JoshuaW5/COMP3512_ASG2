@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 <div class="ui attached stackable grey inverted  menu">
     <div class="ui container">
         <nav class="right menu">
@@ -13,7 +10,7 @@ session_start();
 			<?php echo countFavorites(); ?>
 			</div>
 			</a>
-            <a href="cart.php" class=" item"> <i class="shop icon"></i> Cart 
+            <a href="cart.php" class=" item"> <i class="shop icon"></i> Cart
 			<div class="floating ui teal label" style="top: -0.2em">
 			<?php echo countCart(); ?>
 			</div>
@@ -55,7 +52,7 @@ session_start();
         <div class="right item">
 		<form class="ui form" action="browse-paintings.php">
             <div class="ui mini icon input">
-			
+
                 <input type="text" name="search" placeholder="Search ..."> <i class="search icon"></i> </div>
 
             </div>
@@ -63,7 +60,7 @@ session_start();
         </div>
     </div>
 
-<?php 
+<?php
 
 function countFavorites() {
 $count = 0;
@@ -74,7 +71,7 @@ if(isset($_SESSION['pFavorites'])) {
 		}
 		}
 		}
-		
+
 else if (isset($_SESSION['aFavorites'])) {
 foreach ($_SESSION['aFavorites'] as $item) {
 		if (isset ($item['id'])) {
@@ -83,8 +80,8 @@ foreach ($_SESSION['aFavorites'] as $item) {
 }
 }
 
-return $count;						
-							
+return $count;
+
 }
 
 function countCart() {
@@ -97,8 +94,8 @@ if(isset($_SESSION['cart'])) {
 		}
 		}
 
-return $count;						
-							
+return $count;
+
 }
 
 ?>
