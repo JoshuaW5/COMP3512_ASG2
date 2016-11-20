@@ -165,6 +165,13 @@ public function getPaintingsBySubject($id){
     $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
     return $result;
 }
+public function getPaintingsByGallery($id){
+
+    $sql = $this->getSelect() . " JOIN Galleries USING (GalleryID) WHERE GalleryID = ? ";
+    $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+    return $result;
+
+}
 
 
 
