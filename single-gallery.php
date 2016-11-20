@@ -34,11 +34,6 @@ require 'includes/SingleGalleryLogic.php';
 
     <link href="css/styles.css" rel="stylesheet">
     <style>
-     #map {
-       width: 400px;
-       height: 400px;
-       background-color: grey;
-     }
     </style>
 </head>
 
@@ -60,11 +55,12 @@ require 'includes/SingleGalleryLogic.php';
 
         <section class="ui segment grey100">
             <div class="ui segment stackable grid container">
-                <div class="three wide column">
-                    image here
+                <div class="five wide column">
+                    <div id="map"></div>
+                    <?php echo googleMap($gallery[0]['Latitude'], $gallery[0]['Longitude'], $apiKey); ?>
 
                 </div>
-                <div class="thirteen wide column">
+                <div class="eleven wide column">
                     <h1><?php echo $gallery[0]['GalleryName']; ?></h1>
 
                     <p><?php echo $gallery[0]['GalleryCountry']; ?></p>
@@ -72,8 +68,7 @@ require 'includes/SingleGalleryLogic.php';
                 </div>
             </div>
         </section>
-        <div id="map" class=""></div>
-        <?php echo googleMap($gallery[0]['Latitude'], $gallery[0]['Longitude'], $apiKey); ?>
+
         <!-- Replace the value of the key parameter with your own API key. -->
 
         <h2 class="ui horizontal divider"><i class="paint brush icon"></i>Paintings</h2>
