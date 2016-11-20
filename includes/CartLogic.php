@@ -19,7 +19,9 @@ public function displayCart() {
 $dataAccess = DBHelper::setConnectionInfo();
 
 
-
+if (isset($_GET['empty'])) {
+unset($_SESSION['cart']);
+}
 
 if (isset($_SESSION['cart'])) {
 

@@ -58,9 +58,15 @@ return $painting[0]['GalleryID'];
 
 }
 
+public function searchPaintings($search) {
+	$sql = "SELECT PaintingID, ArtistID, Title, Description, ImageFileName, MSRP FROM Paintings WHERE Title LIKE ? OR Description LIKE ?";
 
+	$search = array("%$search%", "%$search%");
 
+	$result = DBHelper::runQuery($this->getConnection(), $sql, $search);
 
+	return $result;
+}
 
 public function browsePaintings($pageNum, $filters){
 

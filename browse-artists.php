@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <?php
+session_start();
 
 require 'includes/BrowseArtistsLogic.php';
 ?>
@@ -65,8 +66,16 @@ require 'includes/BrowseArtistsLogic.php';
                     <div class="content">
 
                         <a class="header" href="single-artist.php?id=<?php echo $artist['ArtistID']; ?>"><?php echo $artist['FirstName'] . ' ' . $artist['LastName']; ?></a>
+						</div>
+						<div class="extra content">
+						<form class="ui form">
+						<input type="hidden" name="artistID" value="<?php echo $artist['ArtistID'];?>">
+						<button class="ui icon orange submit button" formaction="includes/addToFavorites.php">
+							<i class="heart icon"></i>
+						</button>
+						</form>
+						</div>
 
-                    </div>
                 </div>
                 <?php }?>
             </main>

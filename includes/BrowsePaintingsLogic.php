@@ -57,8 +57,11 @@ if (isset($_GET['shape']) && $_GET['shape'] != '') { $filters[':shape'] = $_GET[
 if (isset($_GET['pg'])) { $pageNum = $_GET['pg'];}
 
 
-
+if (isset($_GET['search'])) {
+$info = $painting->searchPaintings($_GET['search']);
+} else {
 $info = $painting->browsePaintings($pageNum, $filters);//fix for accurate page nums
+}
 
 
 
