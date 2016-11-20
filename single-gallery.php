@@ -57,13 +57,15 @@ require 'includes/SingleGalleryLogic.php';
             <div class="ui segment stackable grid container">
                 <div class="five wide column">
                     <div id="map"></div>
+
                     <?php echo googleMap($gallery[0]['Latitude'], $gallery[0]['Longitude'], $apiKey); ?>
 
                 </div>
                 <div class="eleven wide column">
                     <h1><?php echo $gallery[0]['GalleryName']; ?></h1>
-
-                    <p><?php echo $gallery[0]['GalleryCountry']; ?></p>
+                    <em><?php echo $gallery[0]['GalleryNativeName']; ?></em>
+                    <p><?php echo $gallery[0]['GalleryCity'] . ', ' . $gallery[0]['GalleryCountry']; ?></p>
+                    <i class="globe icon"></i><a href='<?php echo $gallery[0]['GalleryWebSite'] ?>'>Website Link</a>
 
                 </div>
             </div>
