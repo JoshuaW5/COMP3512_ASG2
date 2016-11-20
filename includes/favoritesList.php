@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 'On');
 
@@ -10,7 +8,7 @@ function favoritePaintings() {
 $dataAccess = DBHelper::setConnectionInfo();
 
 if (isset($_GET['removep'])) {
-unset($_SESSION['pFavorites'][$_GET['remove']]);
+unset($_SESSION['pFavorites'][$_GET['removep']]);
 } else if (isset($_GET['removeallp'])) {
 unset($_SESSION['pFavorites']);
 }

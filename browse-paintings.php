@@ -1,6 +1,4 @@
 <?php
-
-session_start();
 require 'includes/BrowsePaintingsLogic.php';
 
 ?>
@@ -101,16 +99,12 @@ foreach ($info as $paintings) {
 	<input type="hidden" name="ID" value="<?php echo $paintings['PaintingID'];?>">
 							<input type="hidden" name="image" value="<?php echo $paintings['ImageFileName']; //Just give the session all the info you need for the cart, except price - we will pull directly from the DB ?>">
 	<?php echo money_format('$%i', $info[0]['MSRP']);
-	echo '</p>
-                    <button class="ui icon orange submit button" formaction="includes/addToCart.php">
-                      <i class="add to cart icon"></i>
-                    </button>
-                    <button class="ui icon orange submit button" formaction="includes/addToFavorites.php">
-                      <i class="heart icon"></i>
-                    </button>
-					</form>
+	echo '</p>';
+	
+	echo checkCart($paintings['PaintingID']);
+	echo checkFavorites($paintings['PaintingID']);
 
-	</div>
+	echo '</form></div>
 	</div>';}?>
 
   </div>

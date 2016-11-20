@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
 <?php
-session_start();
-
 require 'includes/singlePaintingLogic.php';
 ?>
 <html lang=en>
@@ -180,7 +178,7 @@ require 'includes/singlePaintingLogic.php';
 
                 <!-- Cart and Price -->
                 <div class="ui raised segment">
-                    <form class="ui form" action="includes/addToCart.php">
+                    <form class="ui form">
                         <div class="ui tiny statistic">
                           <div class="value">
                             <?php echo money_format('$%i', $info[0]['MSRP']);?>
@@ -190,7 +188,7 @@ require 'includes/singlePaintingLogic.php';
                         <div class="four fields">
                             <div class="three wide field">
                                 <label>Quantity</label>
-                                <input type="number" name="qty">
+                                <input type="number" name="qty" value="1">
                             </div>
                             <div class="four wide field">
                                 <label>Frame</label>
@@ -226,15 +224,10 @@ require 'includes/singlePaintingLogic.php';
 							<input type="hidden" name="image" value="<?php echo $info[0]['ImageFileName']; //Just give the session all the info you need for the cart, except price - we will pull directly from the DB ?>">
                         </div>
                     <div class="ui divider"></div>
-
-                    <button class="ui labeled icon orange submit button">
-                      <i class="add to cart icon"></i>
-                      Add to Cart
-                    </button>
-                    <button class="ui right labeled icon button">
-                      <i class="heart icon"></i>
-                      Add to Favorites
-                    </button>
+					<?php
+						echo checkCart($_GET['id']);
+						echo checkFavorites($_GET['id']);
+						?>
                     </form>
 
                 </div>     <!-- END Cart -->
@@ -341,5 +334,3 @@ require 'includes/singlePaintingLogic.php';
 <?php include 'includes/footer.php';?>
 </body>
 </html>
-
-<?php print_r($_SESSION);

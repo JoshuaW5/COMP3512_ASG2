@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
 <?php
-session_start();
-
 require 'includes/BrowseArtistsLogic.php';
 ?>
 

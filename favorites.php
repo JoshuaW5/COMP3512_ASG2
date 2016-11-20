@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 //require 'includes/BrowsePaintingsLogic.php';
 require 'includes/favoritesList.php';
 require 'includes/singlePaintingLogic.php';

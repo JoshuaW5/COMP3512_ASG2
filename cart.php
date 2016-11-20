@@ -4,7 +4,6 @@
 ini_set('error_reporting', E_ALL);
 
 ini_set('display_errors', 'On');
-session_start();
 //session_destroy();
 
 require 'includes/CartLogic.php';
@@ -80,19 +79,34 @@ $cart = new CartLogic();
 		<th>Total</th>
 		<th><?php echo $cart->getCartTotal(); ?></th>
 	</tr>
-	<th></th>
-	<th></th>
+	<th>
+	<a href="index.php">
+			<button class="ui right floated labeled icon orange button" type="button">
+                      <i class="add to cart icon"></i>
+                      Continue Shopping
+                    </button>
+					</a>
+	</th>
 	<th></th>
 	<th>
-	<button class="ui right floated labeled icon orange submit button" name="empty" value="1" >
-                      <i class="add to cart icon"></i>
+
+	</th>
+	<th>
+			<button class="ui right floated labeled icon orange submit button" name="empty" value="1" >
+                      <i class="remove icon"></i>
                       Empty Cart
                     </button>
 	</th>
-	<th>                    	<button class="ui labeled icon orange submit button" formaction="cart.php" name="update" value="1" >
+	<th>  
+	<button class="ui labeled icon orange submit button" formaction="cart.php" name="update" value="1" >
                       <i class="add to cart icon"></i>
                       Update
-                    </button></th>
+                    </button>
+<button class="ui labeled icon orange button" type="button" style="width:97%; margin-top:0.5em;" formaction="">
+                      <i class="checkmark icon"></i>
+                      Order
+                    </button>	
+	</th>
 					</form>
   </tr>
 	</tfoot>

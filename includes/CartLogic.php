@@ -85,7 +85,7 @@ $this->cartQty++;
 
     echo '<form class="ui form" action="cart.php"><tr>
 
-      <td><img src="images/art/works/square-medium/' . $item["image"] . '.jpg">
+      <td><a href="single-painting.php?id=' . $item['id'] . '"><img src="images/art/works/square-medium/' . $item["image"] . '.jpg"></a>
 
 	  </td>
 

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <div class="ui attached stackable grey inverted  menu">
     <div class="ui container">
         <nav class="right menu">
@@ -5,8 +8,16 @@
                 <i class="user icon"></i> Account <i class="dropdown icon"></i>
                 <div class="menu"> <a class="item"><i class="sign in icon"></i> Login</a> <a class="item"><i class="edit icon"></i> Edit Profile</a> <a class="item"><i class="globe icon"></i> Choose Language</a> <a class="item"><i class="settings icon"></i> Account Settings</a> </div>
             </div>
-            <a href="favorites.php" class=" item"> <i class="heartbeat icon"></i> Favorites </a>
-            <a href="cart.php" class=" item"> <i class="shop icon"></i> Cart </a>
+            <a href="favorites.php" class=" item"> <i class="heartbeat icon"></i> Favorites
+						<div class="floating ui teal label" style="top: -0.2em">
+			<?php echo countFavorites(); ?>
+			</div>
+			</a>
+            <a href="cart.php" class=" item"> <i class="shop icon"></i> Cart 
+			<div class="floating ui teal label" style="top: -0.2em">
+			<?php echo countCart(); ?>
+			</div>
+			</a>
         </nav>
     </div>
 </div>
@@ -51,3 +62,43 @@
 							</form>
         </div>
     </div>
+
+<?php 
+
+function countFavorites() {
+$count = 0;
+if(isset($_SESSION['pFavorites'])) {
+	foreach ($_SESSION['pFavorites'] as $item) {
+		if (isset ($item['id'])) {
+			$count++;
+		}
+		}
+		}
+		
+else if (isset($_SESSION['aFavorites'])) {
+foreach ($_SESSION['aFavorites'] as $item) {
+		if (isset ($item['id'])) {
+			$count++;
+		}
+}
+}
+
+return $count;						
+							
+}
+
+function countCart() {
+$count = 0;
+if(isset($_SESSION['cart'])) {
+	foreach ($_SESSION['cart'] as $item) {
+		if (isset ($item['id'])) {
+			$count++;
+		}
+		}
+		}
+
+return $count;						
+							
+}
+
+?>
