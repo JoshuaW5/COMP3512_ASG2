@@ -11,10 +11,11 @@ $dataAccess = DBHelper::setConnectionInfo();
 
 if (isset($_GET['removep'])) {
 unset($_SESSION['pFavorites'][$_GET['remove']]);
+} else if (isset($_GET['removeallp'])) {
+unset($_SESSION['pFavorites']);
 }
 
 if (isset($_SESSION['pFavorites'])) {
-
 
 $painting = new PaintingDB($dataAccess);
 
@@ -66,6 +67,8 @@ $dataAccess = DBHelper::setConnectionInfo();
 
 if (isset($_GET['removea'])) {
 unset($_SESSION['aFavorites'][$_GET['removea']]);
+} else if (isset($_GET['removealla'])) {
+unset($_SESSION['aFavorites']);
 }
 
 if (isset($_SESSION['aFavorites'])) {

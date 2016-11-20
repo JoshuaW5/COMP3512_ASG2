@@ -38,7 +38,15 @@ $favorites = new FavoritesList();
 
         </div>
 
-		<div class="ui centered huge header">Paintings</div>
+		<div class="ui centered huge header">Paintings
+				<form class="ui form">
+		<input type="hidden" name="removeallp" value="1" />
+		<button class="ui orange submit button" formaction="favorites.php">
+		<h4>Clear All</h4>
+		</button>
+		</form>
+		</div> 
+
 		
 	<div class="ui cards centered doubling stackable grid container">
 	
@@ -51,8 +59,15 @@ $favorites = new FavoritesList();
 
 	</div>
 	
-			<div class="ui centered huge header">Artists</div>
-		
+			<div class="ui centered huge header">Artists
+							<form class="ui form">
+		<input type="hidden" name="removealla" value="1" />
+		<button class="ui orange submit button" formaction="favorites.php">
+		<h4>Clear All</h4>
+		</button>
+		</form>
+		</div>
+
 	<div class="ui cards centered doubling stackable grid container">
 	
 	<?php 

@@ -5,7 +5,7 @@ ini_set('error_reporting', E_ALL);
 
 ini_set('display_errors', 'On');
 session_start();
-session_destroy();
+//session_destroy();
 
 require 'includes/CartLogic.php';
 require 'includes/singlePaintingLogic.php';
@@ -83,12 +83,16 @@ $cart = new CartLogic();
 	<th></th>
 	<th></th>
 	<th></th>
-	<th></th>
-	<th>                     <button class="ui labeled icon orange submit button">
+	<th>
+	<button class="ui right floated labeled icon orange submit button" name="empty" value="1" >
                       <i class="add to cart icon"></i>
-                      Update Cart
+                      Empty Cart
+                    </button>
+	</th>
+	<th>                    	<button class="ui labeled icon orange submit button" formaction="cart.php" name="update" value="1" >
+                      <i class="add to cart icon"></i>
+                      Update
                     </button></th>
-					<input type="hidden" name="update" value="1">
 					</form>
   </tr>
 	</tfoot>
