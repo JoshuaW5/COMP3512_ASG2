@@ -124,7 +124,7 @@ return $button = '<button class="ui labeled icon orange button"  formaction="car
 			 Added to Cart
            </button>';
 } else {
-return $button = '<button class="ui labeled icon orange submit button" formaction="includes/addToCart.php">
+return $button = '<button class="ui labeled icon orange submit button" formaction="addToCart.php">
              <i class="add to cart icon"></i>
 			 Add to Cart
            </button>';
@@ -138,7 +138,7 @@ return $button = '<button class="ui right labeled icon button" formaction="favor
 			 Added to Favorites
            </button>';
 } else {
-return $button = '<button class="ui right labeled icon button" formaction="includes/addToFavorites.php">
+return $button = '<button class="ui right labeled icon button" formaction="addToFavorites.php">
              <i class="heart icon"></i>
 			 Add to Favorites
            </button>';
