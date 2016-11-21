@@ -59,16 +59,15 @@ require 'includes/singlePaintingLogic.php';
                             <p>
 
                                 <?php
-
-                                if (count($averageRating) > 0) {
-                                    for($i=0; $i<$averageRating[0]; $i++)
-                                    {
-                                        echo "<i class='orange star icon'></i>";
-                                    }
-                                    for($i=$averageRating[0]; $i<5; $i++)
-                                    {
-                                        echo "<i class='empty star icon'></i>";
-                                    }
+                                if (intval($averageRating[0]) > 0) {
+                                   for($i=0; $i<intval($averageRating[0]); $i++)
+                                   {
+                                       echo "<i class='orange star icon'></i>";
+                                   }
+                                   for($i=intval($averageRating[0]); $i<5; $i++)
+                                   {
+                                       echo "<i class='empty star icon'></i>";
+                                   }
                                 }
                                 ?>
 
