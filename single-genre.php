@@ -45,15 +45,14 @@ require 'includes/SingleGenreLogic.php';
 <h2 class="ui horizontal divider"><i class="paint brush icon"></i>Paintings</h2>
 <div class="ui six column stackable grid container container-margin">
 <?php
-foreach ($paintings as $paint) {
-$info = $painting->findByID($paint);
-echo '<div class="column">
+foreach ($paintings as $paint) {?>
+<div class="column">
                     <div class="ui fluid card">
-                        <div class="image"> <a href="single-painting.php?id=' . $info[0]['PaintingID'] . '"><img src="images/art/works/square-medium/' . $info[0]['ImageFileName'] . '.jpg"></a> </div>
+                        <div class="image"> <a href="single-painting.php?id=<?php echo $paint['PaintingID'] ?>"><img src="images/art/works/square-medium/<?php echo $paint['ImageFileName'] ?>.jpg"></a> </div>
 					</div>
-	 </div>';
+	 </div>
 
-}
+<?php } ?>
 
 ?>
 

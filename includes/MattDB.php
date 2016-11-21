@@ -30,7 +30,7 @@ protected function getKeyFieldName(){return $this->keyFieldName;}
 
 public function getCartInfo() {
 
-$sql = "SELECT Title FROM TypesMatt";
+$sql = "SELECT Title FROM TypesMatt ORDER BY Title";
 
 $result = DBHelper::runQuery($this->getConnection(), $sql, null);
 

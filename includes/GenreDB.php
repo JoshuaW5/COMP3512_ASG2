@@ -28,4 +28,12 @@ protected function getSelect(){return $this->baseSQL;}
 
 protected function getKeyFieldName(){return $this->keyFieldName;}
 
+public function getGenresSortedByEra()
+{
+    $sql = $this->getSelect() . ' JOIN Eras USING(EraID) ORDER BY EraName';
+
+    $result = DBHelper::runQuery($this->getConnection(), $sql, null);
+
+    return $result;
+}
 }

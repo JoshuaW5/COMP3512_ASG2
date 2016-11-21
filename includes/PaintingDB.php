@@ -10,7 +10,7 @@ include_once 'includes/AbstractDB.php';
 
 class PaintingDB extends AbstractDB{
 
-protected $baseSQL = "SELECT PaintingID, ArtistID, GalleryID, ImageFileName, Title, ShapeID, MuseumLink, AccessionNumber, CopyrightText, Description, Excerpt, YearOfWork, Width, Height, Medium, Cost, MSRP, GoogleLink, GoogleDescription, WikiLink FROM Paintings";
+protected $baseSQL = "SELECT Paintings.PaintingID, Paintings.ArtistID, Paintings.GalleryID, Paintings.ImageFileName, Paintings.Title, Paintings.ShapeID, Paintings.MuseumLink, Paintings.AccessionNumber, Paintings.CopyrightText, Paintings.Description, Paintings.Excerpt, Paintings.YearOfWork, Paintings.Width, Paintings.Height, Paintings.Medium, Paintings.Cost, Paintings.MSRP, Paintings.GoogleLink, Paintings.GoogleDescription, Paintings.WikiLink FROM Paintings";
 
 private $connection = null;
 
@@ -172,6 +172,28 @@ public function getPaintingsByGallery($id){
     return $result;
 
 }
+
+public function getPaintingsByGenre($id){
+    $sql = $this->getSelect() . " JOIN PaintingGenres USING (PaintingID) JOIN Genres USING(GenreID) WHERE GenreID = ? ORDER BY YearOfWork";
+    $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+    return $result;
+}
+
+public function getPaintingsByArtist($id){
+    $sql = $this->getSelect() . " JOIN Artists USING (ArtistID) WHERE ArtistID = ? ORDER BY YearOfWork";
+    $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+    return $result;
+}
+
+public function getGenresForPainting($id){
+
+    $sql = "SELECT GenreName, GenreID FROM Paintings JOIN PaintingGenres USING (PaintingID) JOIN GENRES USING (GenreID) WHERE " . $this->getKeyFieldName() . " = ?";
+    $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+    return $result;
+
+}
+
+
 
 
 

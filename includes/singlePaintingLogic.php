@@ -95,9 +95,7 @@ $galleryName = $gallery->getGalleryName($painting->getGalleryID($id));
 
 
 
-$genres = $paintingGenres->getByPaintingID($id);
-
-$genres = $genre->findByID($genres);
+$genres = $painting->getGenresForPainting($id);
 
 
 
