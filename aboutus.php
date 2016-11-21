@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang=en>
 	<head>
@@ -27,7 +30,7 @@
       <div class="header">Joshua Wojak</div>
       <div class="meta">COMP 3512</div>
       <div class="description">
-        Assignment #1: Data-Driven PHP<br>
+        Assignment #2: Data-Driven PHP<br>
 		(Please don't open my error_log >:[)
       </div>
     </div>
@@ -37,27 +40,25 @@
       <div class="header">Resources Used</div>
       <div class="meta"></div>
       <div class="description">
-        <u><b>Semantic UI</b></u> - An Open Source UI Library 
-		<u><b>Slick</b></u> - A responsive carousel jQuery plugin 
+        <u><b>Semantic UI</b></u> - An Open Source UI Library
+		<u><b>Slick</b></u> - A responsive carousel jQuery plugin
 		<u><b>Images and skeleton</b></u> provided by Mount Royal University
       </div>
     </div>
   </div>
   <div class="card">
     <div class="content">
-      <div class="header">To Do List</div>
-      <div class="meta">I tried the three layer model</div>
+      <div class="header">Coulton Fraser</div>
+      <div class="meta">COMP 3512</div>
       <div class="description">
-        Abstract classes for DB classes
-		Optimization of business logic code
-		More to do when I learn more
+        Assignment #2: Data-Driven PHP
       </div>
     </div>
   </div>
 </div>
-</div>	
+</div>
 <br>
-		
+
 	</body>
 	<?php include 'includes/footer.php'; ?>
 </html>

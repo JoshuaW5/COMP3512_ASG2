@@ -3,7 +3,7 @@
         include 'includes/config.php';
 
 class DBHelper {
-    
+
 
     public static function setConnectionInfo() {
 
@@ -44,7 +44,7 @@ class DBHelper {
                 $statement = $pdo->prepare($sql);
 
                 $statement->execute($parameters);
-
+                
             }
 
             else{

@@ -44,17 +44,5 @@ $genre = $genres->findByID($id);
 }
 
 
-
-$paintingIds = $paintingGenres->getByGenreID($id);
-
-$paintings = array();
-
-
-
-foreach ($paintingIds as $info) {
-
-array_push($paintings, $info['PaintingID']);
-
-}
-
+$paintings = $painting->getPaintingsByGenre($id);
 ?>

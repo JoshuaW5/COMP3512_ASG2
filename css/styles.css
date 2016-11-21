@@ -4,7 +4,11 @@
     box-shadow: none;
     border: none;
 }
-
+div#map {
+  width: 100% !important;
+  height: 300px !important;
+  background-color: grey !important;
+}
 
 .full-width{
     width: 100%;

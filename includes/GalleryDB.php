@@ -47,6 +47,15 @@ return $result;
 
 }
 
+public function getAllSortByGalleryName(){
+
+    $sql = $this->getSelect() . ' ORDER BY GalleryName ASC';
+
+    $result = DBHelper::runQuery($this->getConnection(), $sql, null);
+
+    return $result;
+}
+
 
 
 }

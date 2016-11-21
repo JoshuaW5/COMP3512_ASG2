@@ -5,8 +5,16 @@
                 <i class="user icon"></i> Account <i class="dropdown icon"></i>
                 <div class="menu"> <a class="item"><i class="sign in icon"></i> Login</a> <a class="item"><i class="edit icon"></i> Edit Profile</a> <a class="item"><i class="globe icon"></i> Choose Language</a> <a class="item"><i class="settings icon"></i> Account Settings</a> </div>
             </div>
-            <a class=" item"> <i class="heartbeat icon"></i> Favorites </a>
-            <a class=" item"> <i class="shop icon"></i> Cart </a>
+            <a href="favorites.php" class=" item"> <i class="heartbeat icon"></i> Favorites
+						<div class="floating ui teal label" style="top: -0.2em">
+			<?php echo countFavorites(); ?>
+			</div>
+			</a>
+            <a href="cart.php" class=" item"> <i class="shop icon"></i> Cart
+			<div class="floating ui teal label" style="top: -0.2em">
+			<?php echo countCart(); ?>
+			</div>
+			</a>
         </nav>
     </div>
 </div>
@@ -37,13 +45,57 @@
                 </a>
                 <a class="item" href="browse-galleries.php">
                     <i class="university icon"></i>
-                    Museums
+                    Galleries
                 </a>
             </div>
         </div>
         <div class="right item">
+		<form class="ui form" action="browse-paintings.php">
             <div class="ui mini icon input">
-                <input type="text" placeholder="Search ..."> <i class="search icon"></i> </div>
+
+                <input type="text" name="search" placeholder="Search ..."> <i class="search icon"></i> </div>
+
             </div>
+							</form>
         </div>
     </div>
+
+<?php
+
+function countFavorites() {
+$count = 0;
+if(isset($_SESSION['pFavorites'])) {
+	foreach ($_SESSION['pFavorites'] as $item) {
+		if (isset ($item['id'])) {
+			$count++;
+		}
+		}
+		}
+
+else if (isset($_SESSION['aFavorites'])) {
+foreach ($_SESSION['aFavorites'] as $item) {
+		if (isset ($item['id'])) {
+			$count++;
+		}
+}
+}
+
+return $count;
+
+}
+
+function countCart() {
+$count = 0;
+if(isset($_SESSION['cart'])) {
+	foreach ($_SESSION['cart'] as $item) {
+		if (isset ($item['id'])) {
+			$count++;
+		}
+		}
+		}
+
+return $count;
+
+}
+
+?>

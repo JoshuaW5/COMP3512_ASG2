@@ -25,11 +25,11 @@ abstract class AbstractDB{
 
     public function findByID($id){
         $sql = $this->getSelect() . " WHERE " . $this->getKeyFieldName() . " = ?";
-        return $this->getStatement($sql, $id);
+        return $this->getStatement($sql, Array($id));
     }
-    
-    private function getStatement($sql, $id) {
-        return DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+
+    private function getStatement($sql, $IDs) {
+        return DBHelper::runQuery($this->getConnection(), $sql, $IDs);
     }
 
 }

@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 require ('includes/SingleArtistLogic.php');
 
@@ -230,6 +233,16 @@ require ('includes/SingleArtistLogic.php');
                                         </td>
 
                                     </tr>
+									
+									<tr>
+									<form class="ui form" action="includes/addToFavorites.php">
+									<input type="hidden" name="artistID" value="<?php echo $_GET['id'];?>">
+									                    <button class="ui left labeled icon button">
+                      <i class="heart icon"></i>
+                      Add to Favorites
+                    </button>
+                    </form>
+									</tr>
 
                                 </tbody>
 

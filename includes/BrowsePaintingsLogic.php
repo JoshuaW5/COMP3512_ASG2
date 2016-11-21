@@ -57,8 +57,35 @@ if (isset($_GET['shape']) && $_GET['shape'] != '') { $filters[':shape'] = $_GET[
 if (isset($_GET['pg'])) { $pageNum = $_GET['pg'];}
 
 
-
+if (isset($_GET['search'])) {
+$info = $painting->searchPaintings($_GET['search']);
+} else {
 $info = $painting->browsePaintings($pageNum, $filters);//fix for accurate page nums
+}
+
+function checkCart($id) {
+if (isset($_SESSION['cart'][$id])) {
+return $button = '<button class="ui icon orange button" formaction="cart.php">
+             <i class="checkmark icon"></i>
+           </button>';
+} else {
+return $button = '<button class="ui icon orange submit button" formaction="includes/addToCart.php">
+             <i class="add to cart icon"></i>
+           </button>';
+}
+}
+
+function checkFavorites($id) {
+if (isset($_SESSION['pFavorites'][$id])) {
+return $button = '<button class="ui icon orange button" formaction="favorites.php">
+             <i class="checkmark icon"></i>
+           </button>';
+} else {
+return $button = '<button class="ui icon orange submit button" formaction="includes/addToFavorites.php">
+             <i class="heart icon"></i>
+           </button>';
+}
+}
 
 
 

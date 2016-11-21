@@ -12,7 +12,7 @@ $dataObj = DBHelper::setConnectionInfo();
 
 $genre = new GenreDB($dataObj);
 //$genre->nonStatic();
-$genres = $genre->getAll();
+$genres = $genre->getGenresSortedByEra();
 
 
 
