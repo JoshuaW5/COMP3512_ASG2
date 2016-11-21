@@ -59,12 +59,13 @@ require 'includes/singlePaintingLogic.php';
                             <p>
 
                                 <?php
-                                if (count($ratingInfo) > 0) {
-                                    for($i=0; $i<$ratingInfo[0]['Rating']; $i++)
+
+                                if (count($averageRating) > 0) {
+                                    for($i=0; $i<$averageRating[0]; $i++)
                                     {
                                         echo "<i class='orange star icon'></i>";
                                     }
-                                    for($i=$ratingInfo[0]['Rating']; $i<5; $i++)
+                                    for($i=$averageRating[0]; $i<5; $i++)
                                     {
                                         echo "<i class='empty star icon'></i>";
                                     }
@@ -199,142 +200,160 @@ require 'includes/singlePaintingLogic.php';
                                         <label>Frame</label>
                                         <select id="frame" name="frame" class="ui search dropdown">
                                             <?php
-                                            foreach ($frames as $names) {?>
-                                                <option><?php echo $names['Title'];?></option>;
-                                                <?php } ?>
-                                            </select>
-                                        </div>
-                                        <div class="four wide field">
-                                            <label>Glass</label>
-                                            <select id="glass" name="glass" class="ui search dropdown">
-                                                <?php
-                                                foreach ($glassTypes as $glassNames) {
-                                                    echo '<option>' . $glassNames['Title'] . '</option>';
+                                            foreach ($frames as $names) {
+
+                                                if($frames['Title'] = '[None]'){
+                                                    echo '<option selected="selected">' . $frames['Title'] . '</option>';
+                                                }else{
+                                                    echo '<option>' . $frames['Title'] . '</option>';
                                                 }
-                                                ?>
-                                            </select>
-                                        </div>
-                                        <div class="four wide field">
-                                            <label>Matt</label>
-                                            <select id="matt" name="matt" class="ui search dropdown">
-                                                <?php
-                                                foreach ($mattTypes as $mattNames) {
+                                            }
+                                            ?>
+
+                                        </select>
+                                    </div>
+                                    <div class="four wide field">
+                                        <label>Glass</label>
+                                        <select id="glass" name="glass" class="ui search dropdown">
+                                            <?php
+                                            foreach ($glassTypes as $glassNames) {
+
+                                                if($glassTypes['Title'] = '[None]'){
+                                                    echo '<option selected="selected">' . $glassTypes['Title'] . '</option>';
+                                                }else{
+                                                    echo '<option>' . $glassTypes['Title'] . '</option>';
+                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="four wide field">
+                                        <label>Matt</label>
+                                        <select id="matt" name="matt" class="ui search dropdown">
+
+                                            <?php
+                                            foreach ($mattTypes as $mattNames) {
+                                                if($mattNames['Title'] = '[None]'){
+                                                    echo '<option selected="selected">' . $mattNames['Title'] . '</option>';
+                                                }else{
                                                     echo '<option>' . $mattNames['Title'] . '</option>';
                                                 }
-                                                ?>
-                                            </select>
-                                        </div>
-                                        <input type="hidden" name="ID" value="<?php echo $_GET['id'];?>">
-                                        <input type="hidden" name="image" value="<?php echo $info[0]['ImageFileName']; //Just give the session all the info you need for the cart, except price - we will pull directly from the DB ?>">
+
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
-                                    <div class="ui divider"></div>
-                                    <?php
-                                    echo checkCart($_GET['id']);
-                                    echo checkFavorites($_GET['id']);
-                                    ?>
-                                </form>
-
-                            </div>     <!-- END Cart -->
-
-                        </div>	<!-- END RIGHT data Column -->
-                    </div>		<!-- END Grid -->
-                </section>		<!-- END Main Section -->
-
-                <!-- Tabs for Description, On the Web, Reviews -->
-                <section class="ui doubling stackable grid container">
-                    <div class="sixteen wide column">
-
-                        <div class="ui top attached tabular menu ">
-                            <a class="active item" data-tab="first">Description</a>
-                            <a class="item" data-tab="second">On the Web</a>
-                            <a class="item" data-tab="third">Reviews</a>
-                        </div>
-
-                        <div class="ui bottom attached active tab segment" data-tab="first">
-                            <?php echo $info[0]['Description'];?>
-                        </div>	<!-- END DescriptionTab -->
-
-                        <div class="ui bottom attached tab segment" data-tab="second">
-                            <table class="ui definition very basic collapsing celled table">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            Wikipedia Link
-                                        </td>
-                                        <td>
-                                            <a href="<?php echo $info[0]['WikiLink'];?>">View painting on Wikipedia</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            Google Link
-                                        </td>
-                                        <td>
-                                            <a href="<?php echo $info[0]['GoogleLink'];?>">View painting on Google Art Project</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            Google Text
-                                        </td>
-                                        <td>
-                                            <?php echo $info[0]['GoogleDescription'];?>
-                                        </td>
-                                    </tr>
-
-
-
-                                </tbody>
-                            </table>
-                        </div>   <!-- END On the Web Tab -->
-                        <div class="ui bottom attached tab segment" data-tab="third">
-
-                            <?php foreach($ratingInfo as $rating) {
-                                echo '<div class="ui feed">
-
-                                <div class="event">
-                                <div class="content">
-                                <div class="date">';
-                                echo date_format(date_create($ratingInfo[0]['ReviewDate']), 'm/d/Y');
-                                echo '</div>
-                                <div class="meta">
-                                <a class="like">';
-                                for($i=0; $i<$ratingInfo[0]['Rating']; $i++)
-                                {
-                                    echo "<i class='star icon'></i>";
-                                }
-                                for($i=$ratingInfo[0]['Rating']; $i<5; $i++)
-                                {
-                                    echo "<i class='empty star icon'></i>";
-                                }
-                                echo '</a>
+                                    <input type="hidden" name="ID" value="<?php echo $_GET['id'];?>">
+                                    <input type="hidden" name="image" value="<?php echo $info[0]['ImageFileName']; //Just give the session all the info you need for the cart, except price - we will pull directly from the DB ?>">
                                 </div>
-                                <div class="summary">';
-                                echo $ratingInfo[0]['Comment'];
-                                echo '</div>
-                                </div>
-                                </div>
+                                <div class="ui divider"></div>
+                                <?php
+                                echo checkCart($_GET['id']);
+                                echo checkFavorites($_GET['id']);
+                                ?>
+                            </form>
 
-                                <div class="ui divider"></div>';
-                            }?>
+                        </div>     <!-- END Cart -->
 
-                        </div>
-                    </div>   <!-- END Reviews Tab -->
+                    </div>	<!-- END RIGHT data Column -->
+                </div>		<!-- END Grid -->
+            </section>		<!-- END Main Section -->
 
-                </div>
-            </section> <!-- END Description, On the Web, Reviews Tabs -->
+            <!-- Tabs for Description, On the Web, Reviews -->
+            <section class="ui doubling stackable grid container">
+                <div class="sixteen wide column">
 
-            <!-- Related Images ... will implement this in assignment 2
-            <section class="ui container">
-            <h3 class="ui dividing header">Related Works</h3>
-        </section> -->
+                    <div class="ui top attached tabular menu ">
+                        <a class="active item" data-tab="first">Description</a>
+                        <a class="item" data-tab="second">On the Web</a>
+                        <a class="item" data-tab="third">Reviews</a>
+                    </div>
 
-    </main>
+                    <div class="ui bottom attached active tab segment" data-tab="first">
+                        <?php echo $info[0]['Description'];?>
+                    </div>	<!-- END DescriptionTab -->
+
+                    <div class="ui bottom attached tab segment" data-tab="second">
+                        <table class="ui definition very basic collapsing celled table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Wikipedia Link
+                                    </td>
+                                    <td>
+                                        <a href="<?php echo $info[0]['WikiLink'];?>">View painting on Wikipedia</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Google Link
+                                    </td>
+                                    <td>
+                                        <a href="<?php echo $info[0]['GoogleLink'];?>">View painting on Google Art Project</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Google Text
+                                    </td>
+                                    <td>
+                                        <?php echo $info[0]['GoogleDescription'];?>
+                                    </td>
+                                </tr>
 
 
 
-    <?php include 'includes/footer.php';?>
+                            </tbody>
+                        </table>
+                    </div>   <!-- END On the Web Tab -->
+                    <div class="ui bottom attached tab segment" data-tab="third">
+
+                        <?php foreach($ratingInfo as $rating) {
+                            echo '<div class="ui feed">
+
+                            <div class="event">
+                            <div class="content">
+                            <div class="date">';
+                            echo date_format(date_create($ratingInfo[0]['ReviewDate']), 'm/d/Y');
+                            echo '</div>
+                            <div class="meta">
+                            <a class="like">';
+                            for($i=0; $i<$ratingInfo[0]['Rating']; $i++)
+                            {
+                                echo "<i class='star icon'></i>";
+                            }
+                            for($i=$ratingInfo[0]['Rating']; $i<5; $i++)
+                            {
+                                echo "<i class='empty star icon'></i>";
+                            }
+                            echo '</a>
+                            </div>
+                            <div class="summary">';
+                            echo $ratingInfo[0]['Comment'];
+                            echo '</div>
+                            </div>
+                            </div>
+
+                            <div class="ui divider"></div>';
+                        }?>
+
+                    </div>
+                </div>   <!-- END Reviews Tab -->
+
+            </div>
+        </section> <!-- END Description, On the Web, Reviews Tabs -->
+
+        <!-- Related Images ... will implement this in assignment 2
+        <section class="ui container">
+        <h3 class="ui dividing header">Related Works</h3>
+    </section> -->
+
+</main>
+
+
+
+<?php include 'includes/footer.php';?>
 </body>
 </html>

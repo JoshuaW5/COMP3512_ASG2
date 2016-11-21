@@ -91,6 +91,8 @@ $artistName = $artist->getArtistName($info[0]['ArtistID']);
 
 $ratingInfo = $rating->getByPaintingID($id);
 
+$averageRating = $painting->getPaintingAverageRating($id);
+var_dump($averageRating);
 $galleryName = $gallery->getGalleryName($painting->getGalleryID($id));
 
 

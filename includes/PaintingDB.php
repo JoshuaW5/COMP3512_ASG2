@@ -187,7 +187,15 @@ public function getPaintingsByArtist($id){
 
 public function getGenresForPainting($id){
 
-    $sql = "SELECT GenreName, Genres.GenreID FROM Paintings JOIN PaintingGenres USING (PaintingID) JOIN Genres USING (GenreID) WHERE Paintings." . $this->getKeyFieldName() . " = ?";
+    $sql = "SELECT GenreName, GenreID FROM Paintings JOIN PaintingGenres USING (PaintingID) JOIN GENRES USING (GenreID) WHERE " . $this->getKeyFieldName() . " = ?";
+    $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+    return $result;
+
+}
+
+public function getPaintingAverageRating($id){
+
+    $sql = "SELECT AVG(Rating) FROM Paintings JOIN Reviews USING (PaintingID) WHERE " . $this->getKeyFieldName() . " = ?";
     $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
     return $result;
 
