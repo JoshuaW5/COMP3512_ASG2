@@ -119,12 +119,12 @@ $mattTypes = $matt->getCartInfo(); //Doesn't require an ID.
 
 function checkCart($id) {
 if (isset($_SESSION['cart'][$id])) {
-return $button = '<button class="ui labeled icon orange button"  formaction="cart.php">
+return $button = '<button class="ui labeled icon orange button"  formaction="includes/cart.php">
              <i class="checkmark icon"></i>
 			 Added to Cart
            </button>';
 } else {
-return $button = '<button class="ui labeled icon orange submit button" formaction="addToCart.php">
+return $button = '<button class="ui labeled icon orange submit button" formaction="includes/addToCart.php">
              <i class="add to cart icon"></i>
 			 Add to Cart
            </button>';
@@ -133,12 +133,12 @@ return $button = '<button class="ui labeled icon orange submit button" formactio
 
 function checkFavorites($id) {
 if (isset($_SESSION['pFavorites'][$id])) {
-return $button = '<button class="ui right labeled icon button" formaction="favorites.php">
+return $button = '<button class="ui right labeled icon button" formaction="includes/favorites.php">
              <i class="checkmark icon"></i>
 			 Added to Favorites
            </button>';
 } else {
-return $button = '<button class="ui right labeled icon button" formaction="addToFavorites.php">
+return $button = '<button class="ui right labeled icon button" formaction="includes/addToFavorites.php">
              <i class="heart icon"></i>
 			 Add to Favorites
            </button>';
