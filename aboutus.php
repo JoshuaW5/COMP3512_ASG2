@@ -41,7 +41,7 @@ session_start();
       <div class="meta"></div>
       <div class="description">
         <u><b>Semantic UI</b></u> - An Open Source UI Library
-		<u><b>Slick</b></u> - A responsive carousel jQuery plugin
+		<u><b>Google</b></u> - API for google maps
 		<u><b>Images and skeleton</b></u> provided by Mount Royal University
       </div>
     </div>
@@ -55,6 +55,26 @@ session_start();
       </div>
     </div>
   </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">Project Details</div>
+      <div class="meta">Available on GitHub</div>
+      <div class="description">
+        For further information regarding who did what parts, please refer to our github repository at:<br>
+		<a href="https://github.com/JoshuaW5/COMP3512_ASG2">github.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <div class="header">Randy Connolly</div>
+      <div class="meta">Originially Created</div>
+      <div class="description">
+        As part of an assignent.
+      </div>
+    </div>
+  </div>
+
 </div>
 </div>
 <br>
