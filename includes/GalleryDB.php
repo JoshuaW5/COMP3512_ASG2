@@ -56,6 +56,11 @@ public function getAllSortByGalleryName(){
     return $result;
 }
 
-
+public function getGalleryHavingPainting($id){
+    
+    $sql = $this->getSelect() . " JOIN Paintings USING (GalleryID) WHERE Paintings.PaintingID = ?";
+    $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+    return $result;
+}
 
 }

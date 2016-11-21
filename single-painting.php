@@ -131,7 +131,7 @@ require 'includes/singlePaintingLogic.php';
                                         Museum
                                     </td>
                                     <td>
-                                        <?php echo $galleryName;?>
+                                        <a href="<?php echo $galleryInfo[0]['GalleryWebSite'];?>"><?php echo $galleryInfo[0]['GalleryName'];?></a>
                                     </td>
                                 </tr>
                                 <tr>

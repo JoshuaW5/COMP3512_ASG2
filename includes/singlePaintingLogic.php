@@ -93,17 +93,13 @@ $ratingInfo = $rating->getByPaintingID($id);
 
 $averageRating = $painting->getPaintingAverageRating($id);
 
-$galleryName = $gallery->getGalleryName($painting->getGalleryID($id));
-
-
+$galleryInfo = $gallery->getGalleryHavingPainting($id);
 
 $genres = $painting->getGenresForPainting($id);
 
 
 
-$subjects = $paintingSubject->getByPaintingID($id);
-
-$subjects = $subject->getByPaintingID($subjects);
+$subjects = $subject->getByPaintingID($id);
 
 
 
