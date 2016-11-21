@@ -187,7 +187,7 @@ public function getPaintingsByArtist($id){
 
 public function getGenresForPainting($id){
 
-    $sql = "SELECT GenreName, GenreID FROM Paintings JOIN PaintingGenres USING (PaintingID) JOIN GENRES USING (GenreID) WHERE " . $this->getKeyFieldName() . " = ?";
+    $sql = "SELECT GenreName, Genres.GenreID FROM Paintings JOIN PaintingGenres USING (PaintingID) JOIN Genres USING (GenreID) WHERE Paintings." . $this->getKeyFieldName() . " = ?";
     $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
     return $result;
 
