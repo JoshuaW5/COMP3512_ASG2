@@ -45,7 +45,7 @@
                 </a>
                 <a class="item" href="browse-galleries.php">
                     <i class="university icon"></i>
-                    Museums
+                    Galleries
                 </a>
             </div>
         </div>

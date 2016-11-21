@@ -51,7 +51,7 @@ require 'includes/BrowseGalleriesLogic.php';
     </header>
     <div class="banner1">
 
-        <h1 class="ui huge header banner-header">Museums</h1>
+        <h1 class="ui huge header banner-header">Galleries</h1>
 
     </div>
     <div class="hidden ui divider"></div>

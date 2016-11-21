@@ -135,7 +135,7 @@ return $button = '<button class="ui labeled icon orange submit button" formactio
 
 function checkFavorites($id) {
 if (isset($_SESSION['pFavorites'][$id])) {
-return $button = '<button class="ui right labeled icon button" formaction="favorites.php">>
+return $button = '<button class="ui right labeled icon button" formaction="favorites.php">
              <i class="checkmark icon"></i>
 			 Added to Favorites
            </button>';

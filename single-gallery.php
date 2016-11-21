@@ -77,10 +77,10 @@ require 'includes/SingleGalleryLogic.php';
         <!-- Replace the value of the key parameter with your own API key. -->
 
         <h2 class="ui horizontal divider"><i class="paint brush icon"></i>Paintings</h2>
-        <div class="ui six column stackable grid container container-margin">
+        <div class="ui six column doubling grid container container-margin">
             <?php
             foreach ($painting as $info) {?>
-                <div class="column">
+                <div class="columns">
                     <div class="ui fluid card">
                         <div class="image"> <a href="single-painting.php?id=<?php echo $info['PaintingID']?>"><img src="images/art/works/square-medium/<?php echo $info['ImageFileName'] ?>.jpg"></a></div>
                     </div>
@@ -99,7 +99,7 @@ require 'includes/SingleGalleryLogic.php';
 
 
 
-            <?php include 'includes/footer.php'; var_dump($gallery);?>
+            <?php include 'includes/footer.php';?>
 
         </body>
 
