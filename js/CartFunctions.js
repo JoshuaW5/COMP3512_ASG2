@@ -1,5 +1,12 @@
 $(document).ready(function() { 
 
+ $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+
 var subtotal = parseInt(($('#subtotal').html()).substring(1));
 
 var shippingTotal = 0;
@@ -27,7 +34,7 @@ console.log(previous);
 });
 
 $('.glass').on('change', function () {
-
+e.preventDefault();
 previous = parseInt(previous);
 var currentPrice = $.trim($(this).closest('tr').find('.price').html()).substring(1);
 
@@ -77,7 +84,7 @@ console.log(previous);
 });
 
 $('.frame').on('change', function () {
-
+e.preventDefault();
 previous = parseInt(previous);
 var currentPrice = $.trim($(this).closest('tr').find('.price').html()).substring(1);
 
@@ -128,7 +135,7 @@ console.log(previous);
 });
 
 $('.matt').on('change', function () {
-
+e.preventDefault();
 previous = parseInt(previous);
 var currentPrice = $.trim($(this).closest('tr').find('.price').html()).substring(1);
 
@@ -172,6 +179,7 @@ $.ajax({ // create an AJAX call...
 //Changing painting qty
 $('.qty').on('focus', function(){
 previous = $(this).val();
+e.preventDefault();
 console.log(previous);
 });
 
