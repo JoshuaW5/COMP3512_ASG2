@@ -18,3 +18,127 @@
 [19-Nov-2016 22:47:40 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 46
 [19-Nov-2016 22:47:41 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 46
 [19-Nov-2016 22:47:41 UTC] PHP Notice:  Array to string conversion in /home/solutize1/public_html/mru3512/asg1/assign1/includes/addToFavorites.php on line 46
+[09-Dec-2016 23:31:46 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 8
+[09-Dec-2016 23:32:02 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[09-Dec-2016 23:33:13 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[09-Dec-2016 23:34:43 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[09-Dec-2016 23:35:46 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[09-Dec-2016 23:35:51 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[09-Dec-2016 23:36:01 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[09-Dec-2016 23:36:04 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[09-Dec-2016 23:36:13 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[09-Dec-2016 23:38:28 UTC] PHP Notice:  Undefined variable: _SESSION in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:51:27 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:52:59 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:53:36 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:53:57 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:54:38 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:54:54 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:56:23 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:56:43 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:57:00 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:58:03 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 04:59:10 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:00:25 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:01:14 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:01:37 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:02:01 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:02:21 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:03:06 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:03:32 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:04:59 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:06:34 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:07:11 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:07:48 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:08:04 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:10:12 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:11:40 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:11:56 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:13:58 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 6
+[10-Dec-2016 05:15:10 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 9
+[10-Dec-2016 05:15:21 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:25:54 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:26:18 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:30:30 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 7
+[10-Dec-2016 05:31:17 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 9
+[10-Dec-2016 05:34:38 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 9
+[10-Dec-2016 05:36:03 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 9
+[10-Dec-2016 05:43:05 UTC] PHP Notice:  Undefined index: painting in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 05:43:59 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:46:58 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:48:51 UTC] PHP Notice:  Undefined index: painting in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 05:49:45 UTC] PHP Notice:  Undefined index: painting in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 05:49:57 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:50:35 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:54:06 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:54:47 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:55:03 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:55:04 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:55:04 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 05:55:20 UTC] PHP Notice:  Undefined index: painting in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 05:55:23 UTC] PHP Notice:  Undefined index: painting in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 05:55:50 UTC] PHP Fatal error:  Cannot use [] for reading in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:55:51 UTC] PHP Fatal error:  Cannot use [] for reading in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:57:26 UTC] PHP Notice:  Undefined offset: 441 in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:57:27 UTC] PHP Notice:  Undefined offset: 441 in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:57:31 UTC] PHP Notice:  Undefined offset: 441 in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:57:33 UTC] PHP Notice:  Undefined offset: 441 in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:57:33 UTC] PHP Notice:  Undefined offset: 441 in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:57:34 UTC] PHP Notice:  Undefined offset: 441 in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:57:34 UTC] PHP Notice:  Undefined offset: 441 in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 13
+[10-Dec-2016 05:59:01 UTC] PHP Parse error:  syntax error, unexpected '$_GET' (T_VARIABLE) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 12
+[10-Dec-2016 05:59:02 UTC] PHP Parse error:  syntax error, unexpected '$_GET' (T_VARIABLE) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 12
+[10-Dec-2016 05:59:03 UTC] PHP Parse error:  syntax error, unexpected '$_GET' (T_VARIABLE) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 12
+[10-Dec-2016 06:00:15 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:16 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:17 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:25 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:26 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:27 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:27 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:34 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:39 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:41 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:00:41 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:01 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:02 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:03 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:04 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:08 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:09 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:10 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:10 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:19 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:26 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:48 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:55 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:56 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:56 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:01:57 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:03:13 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 06:04:00 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 11
+[10-Dec-2016 06:07:03 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 15
+[10-Dec-2016 06:07:04 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 15
+[10-Dec-2016 06:22:39 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 15
+[10-Dec-2016 06:22:50 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 15
+[10-Dec-2016 06:23:59 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 14
+[10-Dec-2016 06:24:49 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 14
+[10-Dec-2016 06:26:06 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 14
+[10-Dec-2016 06:28:23 UTC] PHP Notice:  Undefined index: image in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:29:29 UTC] PHP Notice:  Undefined index: image in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 10
+[10-Dec-2016 06:33:37 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 30
+[10-Dec-2016 06:41:53 UTC] PHP Notice:  Undefined index: glass in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 30
+[10-Dec-2016 07:40:40 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:40:56 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:42:52 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:07 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:12 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:13 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:14 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:14 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:15 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:22 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:28 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:30 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:37 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[10-Dec-2016 07:43:48 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36

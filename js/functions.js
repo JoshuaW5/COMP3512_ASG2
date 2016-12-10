@@ -68,13 +68,14 @@ updateSubTotal();
 function updateTotal() {
 $('#total').html('$' + (subtotal + shippingTotal).toFixed(2));
 }
-
+//Javascript for the browsepaintings section
 function updateSubTotal() {
 $('#subtotal').html('$' + (subtotal).toFixed(2));
 }
-$('select#frame.ui.search.dropdown').change(function(){
 
-    $('#PaintingList').append('<div class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div>');
+$('select#frame.ui.search.dropdown').change(function(){
+    $url="service-painting.php";
+    $('#PaintingList').append();
 });
 
 });

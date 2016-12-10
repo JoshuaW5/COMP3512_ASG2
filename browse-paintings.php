@@ -73,8 +73,8 @@ require 'includes/BrowsePaintingsLogic.php';
   <div class="eleven wide column">
    <h1>Paintings</h1>
 	<p>All Paintings [Showing 20]</p>
-    <div id="PaintList">
-        
+    <div id="PaintingList">
+
     </div>
 
 

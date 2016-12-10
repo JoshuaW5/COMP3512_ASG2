@@ -1,5 +1,6 @@
 <?php
 session_start();
+//session_destroy();
 ?>
 <!DOCTYPE html>
 <?php
@@ -32,7 +33,8 @@ $cart = new CartLogic();
 		crossorigin="anonymous">
 	</script>
 
-	<script src="js/functions.js"></script>
+
+	<script src="js/CartFunctions.js"></script>
 
     <link href="css/semantic.css" rel="stylesheet" >
     <link href="css/icon.css" rel="stylesheet" >
@@ -109,12 +111,10 @@ $cart = new CartLogic();
                       Empty Cart
                     </button>
 	</th>
+
 	<th>
-	<button class="ui labeled icon orange submit button" formaction="cart.php" name="update" value="1" >
-                      <i class="add to cart icon"></i>
-                      Update
-                    </button>
-<button class="ui labeled icon orange button" type="button" style="width:97%; margin-top:0.5em;" formaction="">
+
+<button class="ui labeled icon orange button" type="button" formaction="">
                       <i class="checkmark icon"></i>
                       Order
                     </button>

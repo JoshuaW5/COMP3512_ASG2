@@ -71,14 +71,15 @@ if(isset($_SESSION['pFavorites'])) {
 		}
 		}
 		}
-
-else if (isset($_SESSION['aFavorites'])) {
+	
+	if (isset($_SESSION['aFavorites'])) {
 foreach ($_SESSION['aFavorites'] as $item) {
 		if (isset ($item['id'])) {
 			$count++;
 		}
 }
 }
+
 
 return $count;
 

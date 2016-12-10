@@ -108,12 +108,12 @@ $subjects = $subject->getByPaintingID($id);
 $frames = $frame->getCartInfo(); //Doesn't require an ID.
 
 
-
 $glassTypes = $glass->getCartInfo(); //Doesn't require an ID.
 
 
 
 $mattTypes = $matt->getCartInfo(); //Doesn't require an ID.
+
 
 function checkCart($id) {
 if (isset($_SESSION['cart'][$id])) {
