@@ -73,7 +73,7 @@ return $button = '<button class="ui icon orange submit button" formaction="inclu
              <i class="add to cart icon"></i>
            </button>';
 }
-}   
+}
 
 function checkFavorites($id) {
 if (isset($_SESSION['pFavorites'][$id])) {

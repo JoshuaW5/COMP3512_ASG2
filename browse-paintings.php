@@ -75,7 +75,7 @@ require 'includes/BrowsePaintingsLogic.php';
    <h1>Paintings</h1>
 	<p>All Paintings [Showing 20]</p>
     <div id="PaintingList">
-
+        
     </div>
 
 
