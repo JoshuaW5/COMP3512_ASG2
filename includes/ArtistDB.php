@@ -52,7 +52,7 @@ public function findByIDSortByFirstName($id){
     $sql = $this->baseSQL . " WHERE " . $this->getKeyFieldName() . " = ? ORDER BY FirstName";
 
     $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
-    print_r($result);
+    //print_r($result);
     return $result;
 
 }
