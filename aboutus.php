@@ -21,17 +21,16 @@ session_start();
 <br><br>
 
         <div class="banner1">
-            <h1 class="ui huge header banner-header">COMP 3512 - Assignment One </h1>
+            <h1 class="ui huge header banner-header">COMP 3512 - Assignment Three </h1>
         </div>
-	<div class="ui stackable centered grid container">
-<div class="ui cards">
+	<div class="ui stackable grid container">
+<div class="ui centered cards">
   <div class="card">
     <div class="content">
       <div class="header">Joshua Wojak</div>
       <div class="meta">COMP 3512</div>
       <div class="description">
-        Assignment #2: Data-Driven PHP<br>
-		(Please don't open my error_log >:[)
+        Assignment #3: Asynchronous JavaScript<br>
       </div>
     </div>
   </div>
@@ -41,7 +40,7 @@ session_start();
       <div class="meta"></div>
       <div class="description">
         <u><b>Semantic UI</b></u> - An Open Source UI Library
-		<u><b>Google</b></u> - API for google maps
+		<u><b>Google</b></u> - API for google maps<br>
 		<u><b>Images and skeleton</b></u> provided by Mount Royal University
       </div>
     </div>
@@ -51,7 +50,7 @@ session_start();
       <div class="header">Coulton Fraser</div>
       <div class="meta">COMP 3512</div>
       <div class="description">
-        Assignment #2: Data-Driven PHP
+        Assignment #3: Asynchronous JavaScript
       </div>
     </div>
   </div>
@@ -68,7 +67,7 @@ session_start();
   <div class="card">
     <div class="content">
       <div class="header">Randy Connolly</div>
-      <div class="meta">Originially Created</div>
+      <div class="meta">Originial Design By Randy Connolly</div>
       <div class="description">
         As part of an assignent.
       </div>
