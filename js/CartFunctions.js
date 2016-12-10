@@ -224,7 +224,7 @@ $.ajax({ // create an AJAX call...
        });
 
 	   if ($(this).val() <= 0) {
-	$(this).closest('tbody').remove();
+	$(this).closest('tr').remove();
 }
 	   updateShipping();
 });
