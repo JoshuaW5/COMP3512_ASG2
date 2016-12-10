@@ -2,31 +2,39 @@
 session_start();
 ini_set('error_reporting', E_ALL);
 
-ini_set('display_errors', 'On');
+ini_set('display_errors', '1');
 
-public function updateCart() {
-$newFrame = $_GET['frame'];
-$newGlass = $_GET['glass'];
-$newMatt = $_GET['matt'];
-$newQty = $_GET['qty'];
-$i = 0;
+//session_destroy();
 
-foreach ($_SESSION['cart'] as &$item) {
+if (isset($_GET['glass'])) {
+	$id = $_GET['image'];
+	$glass = $_GET['glass'];
+	//$item['glass'] = rtrim(strtok($_GET['glass']));
+	$_SESSION['cart'][$id]['glass'] = rtrim(strtok($glass, "-"));
+	echo print_r($_SESSION['cart'][$id]['glass']);
+ }
 
-if (isset ($item['image'])) {
-
-$item['frame'] = rtrim(strtok($newFrame[$i], "-"));
-$item['glass'] = rtrim(strtok($newGlass[$i], "-"));
-$item['matt'] = rtrim(strtok($newMatt[$i], "-"));
-
-
-if (isset ($_GET['qty'])) {
-$item['qty'] = strtok($newQty[$i], " ");
-}
-$i++;
-
-}
-}
-}
+ if (isset($_GET['frame'])) {
+	$id = $_GET['image'];
+	$frame = $_GET['frame'];
+	$_SESSION['cart'][$id]['frame'] = rtrim(strtok($frame, "-"));
+	echo print_r($_SESSION['cart'][$id]['frame']);
+ }
+ 
+ if (isset($_GET['matt'])) {
+	$id = $_GET['image'];
+	$matt = $_GET['matt'];
+	//$item['glass'] = rtrim(strtok($_GET['glass']));
+	$_SESSION['cart'][$id]['matt'] = rtrim(strtok($matt, "-"));
+	echo print_r($_SESSION['cart'][$id]['matt']);
+ }
+ 
+  if (isset($_GET['qty'])) {
+	$id = $_GET['image'];
+	$qty = $_GET['qty'];
+	//$item['glass'] = rtrim(strtok($_GET['glass']));
+	$_SESSION['cart'][$id]['qty'] = rtrim(strtok($qty, " "));
+	echo print_r($_SESSION['cart'][$id]);
+ }
 
 ?>

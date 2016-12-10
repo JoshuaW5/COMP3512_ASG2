@@ -201,10 +201,10 @@ require 'includes/singlePaintingLogic.php';
                                             <?php
                                             foreach ($frames as $names) {
 
-                                                if($frames['Title'] = '[None]'){
-                                                    echo '<option selected="selected">' . $frames['Title'] . '</option>';
+                                                if($names['Title'] == '[None]'){
+                                                    echo '<option selected="selected">' . $names['Title'] . '</option>';
                                                 }else{
-                                                    echo '<option>' . $frames['Title'] . '</option>';
+                                                    echo '<option>' . $names['Title'] . '</option>';
                                                 }
                                             }
                                             ?>
@@ -217,10 +217,10 @@ require 'includes/singlePaintingLogic.php';
                                             <?php
                                             foreach ($glassTypes as $glassNames) {
 
-                                                if($glassTypes['Title'] = '[None]'){
-                                                    echo '<option selected="selected">' . $glassTypes['Title'] . '</option>';
+                                                if($glassNames['Title'] == '[None]'){
+                                                    echo '<option selected="selected">' . $glassNames['Title'] . '</option>';
                                                 }else{
-                                                    echo '<option>' . $glassTypes['Title'] . '</option>';
+                                                    echo '<option>' . $glassNames['Title'] . '</option>';
                                                 }
                                             }
                                             ?>
@@ -232,7 +232,7 @@ require 'includes/singlePaintingLogic.php';
 
                                             <?php
                                             foreach ($mattTypes as $mattNames) {
-                                                if($mattNames['Title'] = '[None]'){
+                                                if($mattNames['Title'] == '[None]'){
                                                     echo '<option selected="selected">' . $mattNames['Title'] . '</option>';
                                                 }else{
                                                     echo '<option>' . $mattNames['Title'] . '</option>';

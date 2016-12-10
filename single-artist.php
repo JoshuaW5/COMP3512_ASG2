@@ -1,10 +1,6 @@
 <?php
-session_start();
-?>
-<?php
 
 require ('includes/SingleArtistLogic.php');
-
 ?>
 
 
@@ -54,7 +50,6 @@ require ('includes/SingleArtistLogic.php');
 <body >
 
 
-
     <header>
 
         <?php include 'includes/header.php';?>
@@ -82,7 +77,7 @@ require ('includes/SingleArtistLogic.php');
                     <div class="nine wide column">
 
                         <div class="img-slider">
-
+<?php //getHits(); ?>
                             <?php
 
                             if ($paintings[0]['PaintingID'] != null) {
