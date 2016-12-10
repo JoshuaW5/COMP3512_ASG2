@@ -24,7 +24,15 @@ $cart = new CartLogic();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="css/semantic.js"></script>
 	<script src="js/misc.js"></script>
+	
+	<script
+		src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous">
+	</script>
     
+	<script src="js/functions.js"></script>
+	
     <link href="css/semantic.css" rel="stylesheet" >
     <link href="css/icon.css" rel="stylesheet" >
     <link href="css/styles.css" rel="stylesheet">   
@@ -58,7 +66,7 @@ $cart = new CartLogic();
 		<th></th>
 		<th></th>
 		<th>Subtotal</th>
-		<th><?php echo $cart->getCartSubTotal(); ?></th>
+		<th id = "subtotal"><?php echo $cart->getCartSubTotal(); ?></th>
 	</tr>
 	<tr>
     <th></th>
@@ -73,14 +81,14 @@ $cart = new CartLogic();
 								<option value="express" >Express Shipping - $50.00</option>
                                 </select>
 								</th>
-	<th><?php echo $cart->shippingTotal(); ?></th>
+	<th id="shippingTotal">$0.00</th>
 	</tr>
 	      <tr>
 	<th></th>
 		<th></th>
 		<th></th>
 		<th>Total</th>
-		<th><?php echo $cart->getCartTotal(); ?></th>
+		<th id="total"><?php echo $cart->getCartTotal(); ?></th>
 	</tr>
 	<th>
 	<a href="index.php">
