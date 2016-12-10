@@ -128,6 +128,21 @@ $sql .= " AND ShapeID = :shape";
 
 }
 
+if (array_key_exists(":name", $filters)) {
+
+if ($added == 0) {
+
+$sql .= " WHERE Title LIKE :name";
+
+ $added = 1;
+
+} else {
+
+$sql .= " AND Title LIKE :name";
+
+}
+
+}
 
 
 if (empty($filters)){
@@ -202,11 +217,11 @@ public function getPaintingAverageRating($id){
 }
 
 public function getGalleryLinkByPaintingID($id){
-    
+
     $sql = "SELECT GalleryWebSite FROM GalleryWebSite JOIN Paintings USING (GalleryID) WHERE Paintings.PaintingID = ?";
     $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
     return $result;
-    
+
 }
 
 

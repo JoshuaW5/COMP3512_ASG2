@@ -73,42 +73,7 @@ require 'includes/BrowsePaintingsLogic.php';
    <h1>Paintings</h1>
 	<p>All Paintings [Showing 20]</p>
 
-<?php
-foreach ($info as $paintings) {
-	echo '<form class="ui form">
-	<div class="ui two column stackable grid container">
-	<div class="four wide column"><a href="single-painting.php?id=' . $paintings['PaintingID'] . '">
-	<img src="images/art/works/square-medium/';
-	echo $paintings['ImageFileName'];
-	echo '.jpg" alt="..." class="image" ></a>
-	</div>
-	<div class="twelve wide column">
-	<h3 class="ui header">
-	<div class="content">';
-	echo $paintings['Title'];
-	echo '<div class="sub header">';
 
-	echo $artist->getArtistName($paintings['ArtistID']);
-	echo '</div>
-	</div>
-	</h3>
-
-	<p>';
-	echo $paintings['Description'];
-
-	echo "</p>
-	<p>";
-	?>
-	<input type="hidden" name="ID" value="<?php echo $paintings['PaintingID'];?>">
-							<input type="hidden" name="image" value="<?php echo $paintings['ImageFileName']; //Just give the session all the info you need for the cart, except price - we will pull directly from the DB ?>">
-	<?php echo money_format('$%i', $info[0]['MSRP']);
-	echo '</p>';
-
-	echo checkCart($paintings['PaintingID']);
-	echo checkFavorites($paintings['PaintingID']);
-
-	echo '</form></div>
-	</div>';}?>
 
   </div>
   </div>

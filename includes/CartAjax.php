@@ -4,7 +4,7 @@ ini_set('error_reporting', E_ALL);
 
 ini_set('display_errors', 'On');
 
-public function updateCart() {
+function updateCart() {
 $newFrame = $_GET['frame'];
 $newGlass = $_GET['glass'];
 $newMatt = $_GET['matt'];

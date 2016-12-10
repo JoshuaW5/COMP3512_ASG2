@@ -48,20 +48,20 @@ $filters = array();
 
 
 
-if (isset($_GET['artist']) && $_GET['artist'] != '') { $filters[':artist'] = $_GET['artist'];}
-
-if (isset($_GET['museum']) && $_GET['museum'] != '') { $filters[':museum'] = $_GET['museum'];}
-
-if (isset($_GET['shape']) && $_GET['shape'] != '') { $filters[':shape'] = $_GET['shape'];}
-
-if (isset($_GET['pg'])) { $pageNum = $_GET['pg'];}
-
-
-if (isset($_GET['search'])) {
-$info = $painting->searchPaintings($_GET['search']);
-} else {
-$info = $painting->browsePaintings($pageNum, $filters);//fix for accurate page nums
-}
+// if (isset($_GET['artist']) && $_GET['artist'] != '') { $filters[':artist'] = $_GET['artist'];}
+//
+// if (isset($_GET['museum']) && $_GET['museum'] != '') { $filters[':museum'] = $_GET['museum'];}
+//
+// if (isset($_GET['shape']) && $_GET['shape'] != '') { $filters[':shape'] = $_GET['shape'];}
+//
+// if (isset($_GET['pg'])) { $pageNum = $_GET['pg'];}
+//
+//
+// if (isset($_GET['search'])) {
+// $info = $painting->searchPaintings($_GET['search']);
+// } else {
+// $info = $painting->browsePaintings($pageNum, $filters, 20);//fix for accurate page nums
+// }
 
 function checkCart($id) {
 if (isset($_SESSION['cart'][$id])) {
