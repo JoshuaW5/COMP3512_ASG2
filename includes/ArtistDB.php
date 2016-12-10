@@ -47,6 +47,16 @@ return $result;
 
 }
 
+public function findByIDSortByFirstName($id){
+
+    $sql = "SELECT " . $baseSQL . " WHERE " . $this->getKeyFieldName() . " = ? ORDER BY FirstName";
+
+    $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
+
+    return $result[0]['FirstName'] . " " . $result[0]['LastName'];
+
+}
+
 
 
 

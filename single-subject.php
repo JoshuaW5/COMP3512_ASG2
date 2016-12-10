@@ -59,7 +59,7 @@ require 'includes/SingleSubjectLogic.php';
 
                 <div class="three wide column">
 
-                    <?php echo '<img src="images/art/works/square-medium/' . $paintings[0]['ImageFileName'] . '.jpg" alt="..." class="ui centered fluid image">' ?>
+                    <img src="images/art/works/square-medium/<?php echo $paintings[0]['ImageFileName'] ?>.jpg" alt="..." class="ui centered fluid image">
 
 
 
@@ -86,14 +86,12 @@ require 'includes/SingleSubjectLogic.php';
 
             <?php
 
-            foreach ($paintings as $painting){
-                echo '<div class="column"><div class="image"><a href="single-painting.php?id=' . $painting['PaintingID'] . '"><img src="images/art/works/square-medium/' . $painting['ImageFileName'] . '.jpg"></a></div></div>';
+            foreach ($paintings as $painting){?>
+                <div class="column"><div class="image"><a href="single-painting.php?id=<?php echo $painting['PaintingID'] ?>"><img src="images/art/works/square-medium/<?php echo $painting['ImageFileName']?>.jpg"></div><p><?php echo $painting['Title']?></p></a></div>
 
-            }
+            <?php } ?>
 
 
-
-            ?>
 
 
 

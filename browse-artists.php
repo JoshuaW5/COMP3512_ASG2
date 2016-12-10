@@ -57,6 +57,7 @@ require 'includes/BrowseArtistsLogic.php';
 
     </div>
     <main class="ui container">
+        <h1>Sorted by Name:</h1>
         <div class="ui six column grid cards">
             <?php foreach ($artists as $artist){ ?>
 

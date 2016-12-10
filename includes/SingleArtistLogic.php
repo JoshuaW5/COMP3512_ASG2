@@ -29,7 +29,7 @@ $id = $_GET['id'];
 
 
 
-$artistInfo = $artist->findByID($id);
+$artistInfo = $artist->findByIDSortByFirstName($id);
 
 
 
@@ -39,7 +39,7 @@ if (empty($artistInfo))
 
 $id = 1;
 
-$artistInfo = $artist->findByID($id);
+$artistInfo = $artist->findByIDSortByFirstName($id);
 
 }
 

@@ -15,7 +15,7 @@ require 'includes/browseSubjectsLogic.php';
 
 <head>
 
-<meta charset=utf-8>
+    <meta charset=utf-8>
 
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
@@ -27,7 +27,7 @@ require 'includes/browseSubjectsLogic.php';
 
     <script src="css/semantic.js"></script>
 
-	<script src="js/misc.js"></script>
+    <script src="js/misc.js"></script>
 
 
 
@@ -65,41 +65,41 @@ require 'includes/browseSubjectsLogic.php';
 
 
 
-		<?php
-		foreach ($subjects as $info){
-			echo '<div class="column">
+            <?php
+            foreach ($subjects as $info){?>
+                <div class="column">
                     <a href="single-subject.php?id=' . $info['SubjectID'] . '">
-					<div class="ui fluid card">
+                        <div class="ui fluid card">
 
-						<div class="image"><img src="images/art/works/square-medium/' . getImageForSubject($info['SubjectID'], $painting)[0]['ImageFileName'] . '.jpg"></div>
+                            <div class="image"><img src="images/art/works/square-medium/<?php echo getImageForSubject($info['SubjectID'], $painting)[0]['ImageFileName'] ?>.jpg"></div>
 
-						<div class="content">
+                            <div class="content">
 
-							<h4>' . $info['SubjectName'] . '</h4>
+                                <h4><?php echo $info['SubjectName'] ?></h4>
 
-						</div></div></a></div>';
+                            </div></div></a></div>'
 
-		}
-
-
-
-		?>
+                            <?php }
 
 
 
-        </div>
-
-    </main>
+                            ?>
 
 
+
+                        </div>
+
+                    </main>
 
 
 
 
 
 
-<?php include 'includes/footer.php';?>
 
-</body>
 
-</html>
+                    <?php include 'includes/footer.php';?>
+
+                </body>
+
+                </html>
