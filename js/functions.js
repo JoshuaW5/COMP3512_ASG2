@@ -73,9 +73,5 @@ function updateSubTotal() {
 $('#subtotal').html('$' + (subtotal).toFixed(2));
 }
 
-$('select#frame.ui.search.dropdown').change(function(){
-    $url="service-painting.php";
-    $('#PaintingList').append();
-});
 
 });

@@ -27,9 +27,9 @@ if(isset($_GET['artist']) && $_GET['artist'] != ''){
 
     $searchParams += [':artist'=>$_GET['artist']];
 }
-if (isset($_GET['musuem']) && $_GET['musuem'] != null) {
+if (isset($_GET['museum']) && $_GET['museum'] != null) {
 
-    $searchParams += [':musuem'=>$_GET['musuem']];
+    $searchParams += [':museum'=>$_GET['museum']];
 
     # code...
 }
@@ -56,7 +56,6 @@ foreach ($searchParams as $param => $value) {
     }
 }
 
-$arr = $painting->browsePaintings(1, $searchParams);//fix for accurate page nums
-
+$arr = $painting->browsePaintings(1, $searchParams);
 
 ?>
