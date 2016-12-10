@@ -189,9 +189,10 @@ echo '</select>
 
 unset($_SESSION['cart'][$info[0]['PaintingID']]);
 
-if (!isset($_SESSION['cart']['id'][0]))
+if (count($_SESSION['cart']['id']) > 1)
 {
 unset($_SESSION['cart']);
+echo "unsetting all";
 }
 
 }

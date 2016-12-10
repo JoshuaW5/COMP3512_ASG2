@@ -6,7 +6,7 @@
 }
 div#map {
   width: 100% !important;
-  height: 300px !important;
+  height: 100% !important;
   background-color: grey !important;
 }
 
