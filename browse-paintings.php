@@ -16,6 +16,7 @@ require 'includes/BrowsePaintingsLogic.php';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="css/semantic.js"></script>
 	<script src="js/misc.js"></script>
+    <script src="js/functions.js"></script>
 
     <link href="css/semantic.css" rel="stylesheet" >
     <link href="css/icon.css" rel="stylesheet" >
@@ -60,10 +61,10 @@ require 'includes/BrowsePaintingsLogic.php';
 									echo '<option value=' . $sNames['ShapeID'] . '>' . $sNames['ShapeName'] . '</option>'; }?>
                                 </select>
                             </div>
-                                        <button type="sumbit" value="Submit" class="ui left labeled icon orange button">
+                                        <!-- <button type="sumbit" value="Submit" class="ui left labeled icon orange button">
                       <i class="filter icon"></i>
                       Filter
-                    </button>
+                    </button> -->
 </form>
 
 </div>
@@ -72,7 +73,9 @@ require 'includes/BrowsePaintingsLogic.php';
   <div class="eleven wide column">
    <h1>Paintings</h1>
 	<p>All Paintings [Showing 20]</p>
-
+    <div id="PaintList">
+        
+    </div>
 
 
   </div>

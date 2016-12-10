@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<?php 
+<?php
 
 ini_set('error_reporting', E_ALL);
 
@@ -20,30 +20,31 @@ $cart = new CartLogic();
 <meta charset=utf-8>
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="css/semantic.js"></script>
 	<script src="js/misc.js"></script>
-	
+    <script src="js/functions.js"></script>
+
 	<script
 		src="https://code.jquery.com/jquery-3.1.1.min.js"
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 		crossorigin="anonymous">
 	</script>
-    
+
 	<script src="js/functions.js"></script>
-	
+
     <link href="css/semantic.css" rel="stylesheet" >
     <link href="css/icon.css" rel="stylesheet" >
-    <link href="css/styles.css" rel="stylesheet">   
-	
+    <link href="css/styles.css" rel="stylesheet">
+
 </head>
 <body >
-    
+
     <header>
         <?php include 'includes/header.php';?>
-    </header> 
-    
+    </header>
+
 <main >
 <section class="ui segment grey100">
 <div class="ui one column stackable center aligned page grid">
@@ -108,7 +109,7 @@ $cart = new CartLogic();
                       Empty Cart
                     </button>
 	</th>
-	<th>  
+	<th>
 	<button class="ui labeled icon orange submit button" formaction="cart.php" name="update" value="1" >
                       <i class="add to cart icon"></i>
                       Update
@@ -116,7 +117,7 @@ $cart = new CartLogic();
 <button class="ui labeled icon orange button" type="button" style="width:97%; margin-top:0.5em;" formaction="">
                       <i class="checkmark icon"></i>
                       Order
-                    </button>	
+                    </button>
 	</th>
 					</form>
   </tr>
@@ -128,7 +129,7 @@ $cart = new CartLogic();
 </div>
 </section>
 
-</main>    
+</main>
 
 <?php include 'includes/footer.php';?>
 </body>

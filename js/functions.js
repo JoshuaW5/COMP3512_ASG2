@@ -1,6 +1,6 @@
-$(document).ready(function() { 
+$(function(){
 
-var subtotal = parseInt(($('#subtotal').html()).substring(1));
+//var subtotal = parseInt($('#subtotal').html().substring(1));
 
 var shippingTotal = 0;
 
@@ -17,7 +17,7 @@ $('#shippingTotal').html('$' + shippingTotal.toFixed(2));
 
 updateTotal();
 
-})
+});
 
 
 
@@ -30,26 +30,25 @@ $('.glass').on('focusin', function(){
 $('.glass').on('change', function () {
 
 var currentPrice = $.trim($(this).closest('tr').find('.price').html()).substring(1);
-console.log(previous);//works but [none] needs to be fixed like the if below. 
+console.log(previous);//works but [none] needs to be fixed like the if below.
 
 currentPrice = parseInt(currentPrice);
 //currentGlassPrice = parseInt(currentGlassPrice);
 
 
-$(this).prop('selected', true)
+$(this).prop('selected', true);
 
 var price = $(this).val();
 if (isNaN(price)) {
 price = 0;
 }
- 
+
 subtotal = subtotal + parseInt(price);
 
 //$('.price').html('$' .toFixed(2));
 
 updateTotal();
 updateSubTotal();
-
 
 //$.ajax({ // create an AJAX call...
 //           data: {'matt': $('#matt').find(":selected").text(),
@@ -64,7 +63,7 @@ updateSubTotal();
 //		   }
 //       });
 //    });
-})
+});
 
 function updateTotal() {
 $('#total').html('$' + (subtotal + shippingTotal).toFixed(2));
@@ -73,6 +72,9 @@ $('#total').html('$' + (subtotal + shippingTotal).toFixed(2));
 function updateSubTotal() {
 $('#subtotal').html('$' + (subtotal).toFixed(2));
 }
+$('select#frame.ui.search.dropdown').change(function(){
+
+    $('#PaintingList').append('<div class="ui active inverted dimmer"><div class="ui text loader">Loading</div></div>');
+});
 
-
-});
+});
