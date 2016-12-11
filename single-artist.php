@@ -228,7 +228,7 @@ require ('includes/SingleArtistLogic.php');
                                         </td>
 
                                     </tr>
-									
+
 									<tr>
 									<form class="ui form" action="includes/addToFavorites.php">
 									<input type="hidden" name="artistID" value="<?php echo $_GET['id'];?>">
@@ -278,7 +278,7 @@ require ('includes/SingleArtistLogic.php');
                         echo '<div class="three wide column stackable">
 
 
-                        <div class="image rounded ui"> <a href="single-painting.php?id=' . $paint['PaintingID'] . '"><img src="images/art/works/square-medium/' . $paint['ImageFileName'] . '.jpg"></a> </div>
+                        <div class="image rounded ui"> <a href="single-painting.php?id=' . $paint['PaintingID'] . '"><img class="hoverimage" src="images/art/works/square-medium/' . $paint['ImageFileName'] . '.jpg"></a> </div>
 
 
 

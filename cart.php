@@ -22,16 +22,17 @@ $cart = new CartLogic();
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    	<script
+    		src="https://code.jquery.com/jquery-3.1.1.min.js"
+    		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    		crossorigin="anonymous">
+    	</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
     <script src="css/semantic.js"></script>
 	<script src="js/misc.js"></script>
     <script src="js/functions.js"></script>
 
-	<script
-		src="https://code.jquery.com/jquery-3.1.1.min.js"
-		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-		crossorigin="anonymous">
-	</script>
 
 
 	<script src="js/CartFunctions.js"></script>

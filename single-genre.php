@@ -48,7 +48,7 @@ require 'includes/SingleGenreLogic.php';
 foreach ($paintings as $paint) {?>
 <div class="column">
                     <div class="ui fluid card">
-                        <div class="image"> <a href="single-painting.php?id=<?php echo $paint['PaintingID'] ?>"><img src="images/art/works/square-medium/<?php echo $paint['ImageFileName'] ?>.jpg"></a> </div>
+                        <div class="image"> <a href="single-painting.php?id=<?php echo $paint['PaintingID'] ?>"><img class='hoverimage' src="images/art/works/square-medium/<?php echo $paint['ImageFileName'] ?>.jpg"></a> </div>
 					</div>
 	 </div>
 

@@ -1,5 +1,7 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 <script src="js/search.js"></script>
+
 <div class="ui attached stackable grey inverted  menu">
     <div class="ui container">
         <nav class="right menu">

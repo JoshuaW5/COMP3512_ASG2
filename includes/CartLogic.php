@@ -44,7 +44,7 @@ $frames = $frame->getCartInfo();
 $mattTypes = $matt->getCartInfo();
 foreach ($mattTypes as &$matt) {
 if ($matt['Title'] != '[None]'){
-$matt['Price'] = 10; 
+$matt['Price'] = 10;
 } else {
 $matt['Price'] = 0;
 }
@@ -85,7 +85,7 @@ $this->cartQty++;
 
     echo '<form class="ui form cartItem" id="paintingForm" action="cart.php"><tr>
 		<input type="hidden" class="paintingid" value="' . $item["id"] . '">
-      <td><a href="single-painting.php?id=' . $item['id'] . '"><img src="images/art/works/square-medium/' . $item["image"] . '.jpg"></a>
+      <td><a href="single-painting.php?id=' . $item['id'] . '"><img class="imagehover" src="images/art/works/square-medium/' . $item["image"] . '.jpg"></a>
 
 	  </td>
 
@@ -108,12 +108,12 @@ $this->cartQty++;
                                 <select id="frame" name="frame[]" class="ui search dropdown frame">';
 
 								echo "<option class='framePrice' value=" . $frames[$chosenFrame]["Price"] . "> " . $frames[$chosenFrame]["Title"] . " - " . money_format('$%i',$frames[$chosenFrame]["Price"]) . "</option>";
-						  						foreach ($frames as $names) {																
-												
+						  						foreach ($frames as $names) {
+
 												if ($names["Title"] != $frames[$chosenFrame]["Title"]) {
 
 						  echo "<option class='framePrice' value=" . $names["Price"] . "> " . $names["Title"] . " - " . money_format('$%i',$names["Price"]) . "</option>";
-												}																					
+												}
 
 						  }
 
@@ -184,7 +184,7 @@ echo '</select>
 	  </td>
 
     </tr>';
-	
+
 } else {
 
 unset($_SESSION['cart'][$info[0]['PaintingID']]);
@@ -274,7 +274,7 @@ public function getCartSubTotal() {
 return money_format('$%i', $this->cartSubtotal);
 }
 
-public function getShippingOption() { 
+public function getShippingOption() {
 
 }
 
@@ -287,11 +287,11 @@ if ($this->cartSubtotal < 1500 && $_GET['shipping'] == 'standard')
 {
 	$this->shippingTotal = self::STANDARD_SHIPPING;
 	return money_format('$%i', $this->shippingTotal);
-	
+
 } else if ($this->cartSubtotal < 2500 && $_GET['shipping'] == 'standard' || $this->cartSubtotal >= 2500) {
 
 	return money_format('$%i', 0);
-	
+
 } else {
 	$this->shippingTotal = self::EXPRESS_SHIPPING;
 	return money_format('$%i', $this->shippingTotal);
@@ -308,7 +308,7 @@ return money_format('$%i', 0);
 
 }
 
-function getCartTotal() { 
+function getCartTotal() {
 return money_format('$%i', $this->cartSubtotal + $this->shippingTotal);
 
 }

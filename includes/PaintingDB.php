@@ -76,7 +76,7 @@ $added = 0;
 
 
 
-$sql = "SELECT PaintingID, ArtistID, LastName, Title, Description, ImageFileName, MSRP FROM Paintings JOIN Artists USING (ArtistID)";
+$sql = "SELECT PaintingID, ArtistID, FirstName, LastName, Title, Description, ImageFileName, MSRP FROM Paintings JOIN Artists USING (ArtistID)";
 
 
 

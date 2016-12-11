@@ -18,6 +18,7 @@ require 'includes/BrowsePaintingsLogic.php';
     <script src="css/semantic.js"></script>
     <script src="js/misc.js"></script>
     <script src="js/PaintingFunctions.js"></script>
+    <script type="text/javascript" src="js/hoverImage.js"></script>
 
     <link href="css/semantic.css" rel="stylesheet" >
     <link href="css/icon.css" rel="stylesheet" >
