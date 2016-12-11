@@ -144,6 +144,24 @@ $sql .= " AND Title LIKE :name";
 
 }
 
+if (array_key_exists(":search", $filters)) {
+
+
+if ($added == 0) {
+
+$sql .= " WHERE Title LIKE :search";
+
+ $added = 1;
+
+} else {
+
+$sql .= " AND Title LIKE :search";
+
+}
+
+}
+
+
 
 if (empty($filters)){
 
@@ -153,12 +171,7 @@ $filters = null;
 
 }
 
-
-
 $sql .= " ORDER BY YearOfWork LIMIT 20 OFFSET $offset";
-
-
-
 
 
 $result = DBHelper::runQuery($this->getConnection(), $sql, $filters);

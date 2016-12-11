@@ -142,3 +142,12 @@
 [10-Dec-2016 07:43:30 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
 [10-Dec-2016 07:43:37 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
 [10-Dec-2016 07:43:48 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/solutize1/public_html/mru3512/asg1/assign1/includes/CartAjax.php on line 36
+[11-Dec-2016 02:05:09 UTC] PHP Warning:  include_once(includes/AbstractDB.php): failed to open stream: No such file or directory in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 7
+[11-Dec-2016 02:05:09 UTC] PHP Warning:  include_once(): Failed opening 'includes/AbstractDB.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 7
+[11-Dec-2016 02:05:09 UTC] PHP Fatal error:  Class 'AbstractDB' not found in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 11
+[11-Dec-2016 02:05:26 UTC] PHP Warning:  include_once(includes/AbstractDB.php): failed to open stream: No such file or directory in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 7
+[11-Dec-2016 02:05:26 UTC] PHP Warning:  include_once(): Failed opening 'includes/AbstractDB.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 7
+[11-Dec-2016 02:05:26 UTC] PHP Fatal error:  Class 'AbstractDB' not found in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 11
+[11-Dec-2016 02:05:28 UTC] PHP Warning:  include_once(includes/AbstractDB.php): failed to open stream: No such file or directory in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 7
+[11-Dec-2016 02:05:28 UTC] PHP Warning:  include_once(): Failed opening 'includes/AbstractDB.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 7
+[11-Dec-2016 02:05:28 UTC] PHP Fatal error:  Class 'AbstractDB' not found in /home/solutize1/public_html/mru3512/asg1/assign1/includes/PaintingDB.php on line 11
