@@ -36,7 +36,7 @@ require 'includes/BrowsePaintingsLogic.php';
                     <h3 class="filters-header">Filters</h3>
                     <div class="ui fitted divider"></div>
                     <div class="ui form">
-                        <form action="browse-paintings.php">
+                        <form action="">
                             <div class="field">
                                 <label class="filters-label">Artist</label>
                                 <select id="frame" class="ui search dropdown" name="artist">
@@ -78,7 +78,7 @@ require 'includes/BrowsePaintingsLogic.php';
                                     <div class="ui inverted dimmer" id="paintLoader">
                                         <div class="ui massive text loader">Loading</div>
                                     </div>
-                                    <p>All Paintings [Showing 20]</p>
+                                    <p id="searchParam">All Paintings [TOP 20]</p>
                                     <div id="PaintingList">
                                     </div>
 
