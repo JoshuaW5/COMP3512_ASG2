@@ -109,6 +109,3 @@ header.sticky nav ul li a {
   /* put the nav on the left */
   order: -1;
 }
-.loader{
-    top: 5% !important;
-}

@@ -1,9 +1,11 @@
 $(function(){
 
 
-
+    //This is a base URL for the AJAX query
     var urlBase = 'service-painting.php';
-    var params = {artist:'', museum:'', shape:'', name:'', search:''};
+
+    //Paramters
+    var params = {artist:'', museum:'', shape:'', name:''};
 
     buildPaintingCard = function(painting){
 
@@ -122,5 +124,6 @@ $('#frame[name=shape]').on('change', function(){
 }, 1000);
 
 });
+
 
 });
