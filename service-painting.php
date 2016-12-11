@@ -1,7 +1,7 @@
 <?php
 
 
-
+//left the logic of the service painting in a file with all other logic files for consistency.
 include 'includes/ServicePaintingLogic.php';
 
 $json = json_encode($arr);
