@@ -11,9 +11,9 @@ body {
   padding: 0 0 20px 0;
   position: fixed;
   top: 0;
-  width: 70%;  
-  box-shadow:  0px 2px 5px 0px rgba(0, 0, 0, 0.1);    
-  background-color: white;    
+  width: 70%;
+  box-shadow:  0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 .header__utility {
     background-color: #E0E0E0;
@@ -23,7 +23,7 @@ body {
     padding: 5px 0;
 }
 .header__utility-menu ul {
-    list-style: none;    
+    list-style: none;
 }
 .header__utility-menu li {
     float: right;
@@ -68,7 +68,7 @@ body {
 
 header.sticky {
   padding: 10px 0;
-background: white;    
+background: white;
 }
 header.sticky h1 a {
   height: 23px;
@@ -108,4 +108,7 @@ header.sticky nav ul li a {
 .HolyGrail-nav {
   /* put the nav on the left */
   order: -1;
+}
+.loader{
+    top: 5% !important;
 }
