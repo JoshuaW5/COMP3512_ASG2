@@ -55,7 +55,7 @@
 
 				   <div class="ui search">
 				               <div class="ui mini icon input">
-					<input class="prompt" type="text" placeholder="Search..."><i class="search icon"></i></div>
+					<input class="prompt" id="ajaxsearch" type="text" placeholder="Search..."><i class="search icon"></i></div>
 					<div class="results"></div>
 				  </div>
             </div>
@@ -73,7 +73,7 @@ if(isset($_SESSION['pFavorites'])) {
 		}
 		}
 		}
-	
+
 	if (isset($_SESSION['aFavorites'])) {
 foreach ($_SESSION['aFavorites'] as $item) {
 		if (isset ($item['id'])) {

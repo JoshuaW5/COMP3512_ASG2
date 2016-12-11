@@ -24,7 +24,9 @@ $(function(){
         }
     )
     .done(function(result){
-        var data = JSON.parse(result);
+        console.log(result);
+        var data = result;
+
         $.each(data, function(i, item){
 
             $('PaintingList').empty();
@@ -64,66 +66,66 @@ $('#frame[name=artist]').on('change', function(){
     $('#PaintingList').parent().css('height', height);
     //$('PaintingLoader').addClass('active');
     setTimeout(
-  function(){
-    $('#PaintingList').parent().css('height', 'auto');
-    $('#PaintingList').empty();
-    $('#searchParam').text('Artist: ' + $('#frame[name=artist]').find(':selected').text() + ' [TOP 20]');
-    getPaintingsBy(params);
-    $('#paintLoader').removeClass('active');
-    $('#PaintingList').transition('slide left');
-    //$('PaintingLoader').removeClass('active');
-    $("select#frame[name=shape], select#frame[name=museum]").prop('selectedIndex', 0);
-}, 1000);
+        function(){
+            $('#PaintingList').parent().css('height', 'auto');
+            $('#PaintingList').empty();
+            $('#searchParam').text('Artist: ' + $('#frame[name=artist]').find(':selected').text() + ' [TOP 20]');
+            getPaintingsBy(params);
+            $('#paintLoader').removeClass('active');
+            $('#PaintingList').transition('slide left');
+            //$('PaintingLoader').removeClass('active');
+            $("select#frame[name=shape], select#frame[name=museum]").prop('selectedIndex', 0);
+        }, 1000);
 
 
 
-});
+    });
 
-$('#frame[name=museum]').on('change', function(){
+    $('#frame[name=museum]').on('change', function(){
 
-    resetParams();
-    params.museum = $(this).val();
-    var height = $('#PaintingList').height();
-    $('#PaintingList').transition('slide left');
-    $('#paintLoader').addClass('active');
-    $('#PaintingList').parent().css('height', height);
-    //$('PaintingLoader').addClass('active');
-    setTimeout(
-  function(){
-    $('#PaintingList').parent().css('height', 'auto');
-    $('#PaintingList').empty();
-    $('#searchParam').text('Museum: ' + $('#frame[name=museum]').find(':selected').text() + ' [TOP 20]');
-    getPaintingsBy(params);
-    $('#paintLoader').removeClass('active');
-    $('#PaintingList').transition('slide left');
-    //$('PaintingLoader').removeClass('active');
-    $("select#frame[name=shape], select#frame[name=artist]").prop('selectedIndex', 0);
-}, 1000);
+        resetParams();
+        params.museum = $(this).val();
+        var height = $('#PaintingList').height();
+        $('#PaintingList').transition('slide left');
+        $('#paintLoader').addClass('active');
+        $('#PaintingList').parent().css('height', height);
+        //$('PaintingLoader').addClass('active');
+        setTimeout(
+            function(){
+                $('#PaintingList').parent().css('height', 'auto');
+                $('#PaintingList').empty();
+                $('#searchParam').text('Museum: ' + $('#frame[name=museum]').find(':selected').text() + ' [TOP 20]');
+                getPaintingsBy(params);
+                $('#paintLoader').removeClass('active');
+                $('#PaintingList').transition('slide left');
+                //$('PaintingLoader').removeClass('active');
+                $("select#frame[name=shape], select#frame[name=artist]").prop('selectedIndex', 0);
+            }, 1000);
 
-});
+        });
 
-$('#frame[name=shape]').on('change', function(){
+        $('#frame[name=shape]').on('change', function(){
 
-    resetParams();
-    params.shape = $(this).val();
-    var height = $('#PaintingList').height();
-    $('#PaintingList').transition('slide left');
-    $('#paintLoader').addClass('active');
-    $('#PaintingList').parent().css('height', height);
-    //$('PaintingLoader').addClass('active');
-    setTimeout(
-  function(){
-    $('#PaintingList').parent().css('height', 'auto');
-    $('#PaintingList').empty();
-    $('#searchParam').text('Shape: ' + $('#frame[name=shape]').find(':selected').text() + ' [TOP 20]');
-    getPaintingsBy(params);
-    $('#paintLoader').removeClass('active');
-    $('#PaintingList').transition('slide left');
-    //$('PaintingLoader').removeClass('active');
-    $("select#frame[name=museum], select#frame[name=artist]").prop('selectedIndex', 0);
-}, 1000);
+            resetParams();
+            params.shape = $(this).val();
+            var height = $('#PaintingList').height();
+            $('#PaintingList').transition('slide left');
+            $('#paintLoader').addClass('active');
+            $('#PaintingList').parent().css('height', height);
+            //$('PaintingLoader').addClass('active');
+            setTimeout(
+                function(){
+                    $('#PaintingList').parent().css('height', 'auto');
+                    $('#PaintingList').empty();
+                    $('#searchParam').text('Shape: ' + $('#frame[name=shape]').find(':selected').text() + ' [TOP 20]');
+                    getPaintingsBy(params);
+                    $('#paintLoader').removeClass('active');
+                    $('#PaintingList').transition('slide left');
+                    //$('PaintingLoader').removeClass('active');
+                    $("select#frame[name=museum], select#frame[name=artist]").prop('selectedIndex', 0);
+                }, 1000);
 
-});
+            });
 
 
-});
+        });

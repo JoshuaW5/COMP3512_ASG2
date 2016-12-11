@@ -1,10 +1,68 @@
 <?php
 
+ini_set('error_reporting', E_ALL);
 
-//left the logic of the service painting in a file with all other logic files for consistency.
-include 'includes/ServicePaintingLogic.php';
+ini_set('display_errors', 'On');
 
-$json = json_encode($arr);
-echo json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+
+include 'includes/DataAccess.php';
+
+include 'includes/PaintingDB.php';
+
+include 'includes/ArtistDB.php';
+
+include 'includes/GalleryDB.php';
+
+include 'includes/ShapeDB.php';
+
+$dataObj = DBHelper::setConnectionInfo();
+
+$painting = new PaintingDB($dataObj);
+
+$arr = [];
+
+$searchParams = [];
+if(isset($_GET['artist']) && $_GET['artist'] != ''){
+
+    $searchParams += [':artist'=>$_GET['artist']];
+}
+if (isset($_GET['museum']) && $_GET['museum'] != null) {
+
+    $searchParams += [':museum'=>$_GET['museum']];
+
+    # code...
+}
+if (isset($_GET['shape']) && $_GET['shape'] != null) {
+
+    $searchParams += [':shape'=>$_GET['shape']];
+
+    # code...
+}
+if (isset($_GET['name']) && $_GET['name'] != null) {
+
+    $searchParams += [':name'=>$_GET['name'] . '%'];
+
+    # code...
+}
+if (isset($_GET['search']) && $_GET['search'] != null) {
+	$searchParams += [':search'=>$_GET['search'] . '%'];
+}
+else{
+    # top 20
+
+}
+
+foreach ($searchParams as $param => $value) {
+    if ($value == "") {
+        unset($arr[$param]);
+    }
+}
+
+$arr = $painting->browsePaintings(1, $searchParams);
+
+
+
+echo json_encode($arr);
 
  ?>
