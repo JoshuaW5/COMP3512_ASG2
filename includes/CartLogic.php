@@ -170,7 +170,7 @@ echo '</select>
 
 	                              <div class="sixteen wide field">
 
-                                <input type="number" name="qty[]" class="qty" value="' . $item["qty"] . '">
+                                <input type="number" min="0" name="qty[]" class="qty" value="' . $item["qty"] . '">
 
                             </div>
 

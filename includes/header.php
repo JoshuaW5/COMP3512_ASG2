@@ -1,3 +1,5 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script src="js/search.js"></script>
 <div class="ui attached stackable grey inverted  menu">
     <div class="ui container">
         <nav class="right menu">
@@ -50,13 +52,13 @@
             </div>
         </div>
         <div class="right item">
-		<form class="ui form" action="browse-paintings.php">
-            <div class="ui mini icon input">
 
-                <input type="text" name="search" placeholder="Search ..."> <i class="search icon"></i> </div>
-
+				   <div class="ui search">
+				               <div class="ui mini icon input">
+					<input class="prompt" type="text" placeholder="Search..."><i class="search icon"></i></div>
+					<div class="results"></div>
+				  </div>
             </div>
-							</form>
         </div>
     </div>
 

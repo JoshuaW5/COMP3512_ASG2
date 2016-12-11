@@ -45,6 +45,9 @@ if (isset($_GET['name']) && $_GET['name'] != null) {
 
     # code...
 }
+if (isset($_GET['search']) && $_GET['search'] != null) {
+	$searchParams += [':search'=>$_GET['search'] . '%'];
+}
 else{
     # top 20
 

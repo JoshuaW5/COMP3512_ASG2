@@ -3,7 +3,7 @@ $(function(){
 
 
     var urlBase = 'service-painting.php';
-    var params = {artist:'', museum:'', shape:'', name:''};
+    var params = {artist:'', museum:'', shape:'', name:'', search:''};
 
     buildPaintingCard = function(painting){
 
