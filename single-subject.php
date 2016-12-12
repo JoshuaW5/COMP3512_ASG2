@@ -85,7 +85,7 @@ require 'includes/singleSubjectLogic.php';
         <div class="ui six column stackable grid container container-margin">
 
             <h2 class="ui horizontal divider"><i class="paint brush icon"></i>Paintings</h2>
-
+            <h3 class="ui container">Ordered by Title</h3>
             <?php
 
             foreach ($paintings as $painting){?>

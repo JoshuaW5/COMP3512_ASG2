@@ -10,12 +10,6 @@ include 'includes/DataAccess.php';
 
 include 'includes/PaintingDB.php';
 
-include 'includes/ArtistDB.php';
-
-include 'includes/GalleryDB.php';
-
-include 'includes/ShapeDB.php';
-
 $dataObj = DBHelper::setConnectionInfo();
 
 $painting = new PaintingDB($dataObj);
@@ -23,6 +17,11 @@ $painting = new PaintingDB($dataObj);
 $arr = [];
 
 $searchParams = [];
+
+//-----------------------------------------------------------------------------------------
+//         ASSIGNING SEARCH PARAMETERS GIVEN FROM API CALL
+//-----------------------------------------------------------------------------------------
+
 if(isset($_GET['artist']) && $_GET['artist'] != ''){
 
     $searchParams += [':artist'=>$_GET['artist']];
@@ -31,38 +30,37 @@ if (isset($_GET['museum']) && $_GET['museum'] != null) {
 
     $searchParams += [':museum'=>$_GET['museum']];
 
-    # code...
 }
 if (isset($_GET['shape']) && $_GET['shape'] != null) {
 
     $searchParams += [':shape'=>$_GET['shape']];
 
-    # code...
 }
 if (isset($_GET['name']) && $_GET['name'] != null) {
 
     $searchParams += [':name'=>$_GET['name'] . '%'];
 
-    # code...
 }
 if (isset($_GET['search']) && $_GET['search'] != null) {
 	$searchParams += [':search'=>$_GET['search'] . '%'];
 }
 else{
-    # top 20
 
 }
 
 foreach ($searchParams as $param => $value) {
     if ($value == "") {
+        //IF THE PARAM WAS EMPTY FORGET ABOUT TRYING TO SEARCH FOR IT
         unset($arr[$param]);
     }
 }
 
+//CALL THE PAINTING QUERY
 $arr = $painting->browsePaintings(1, $searchParams);
 
 
-
+//MAKE JSON
+//header('Content-Type: application/json
 echo json_encode($arr);
 
  ?>

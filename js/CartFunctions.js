@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+
+    //-----------------------------------------------------------------------------------------
+    //         MOUSE HOVER OVER THUMBNAIL EVENT FOR ASYNC ELEMENTS
+    //-----------------------------------------------------------------------------------------
     var imageHover = function(){
         $('.hoverimage').mouseover(function(e){
             console.log('this');
@@ -14,16 +18,7 @@ $(document).ready(function() {
                     //.css("display", "none")
                     .css("position", "absolute")
                     .fadeIn("fast");
-            //preview.prepend(image);
-
-            //$('body').prepend(preview);
-            //$("#preview").fadeIn(1000);
         });
-        //$('.image').on("mouseleave", function(e){
-        //    $("#preview")
-        //    .css("top", (e.pageY - 10) + "px")
-        //    .css("left", (e.pageX + 10) + "px");
-        //});
         $('.hoverimage').on("mouseleave", function(e){
             $("#preview").remove();
 
@@ -56,7 +51,7 @@ $('#shippingTotal').html('$' + shippingTotal.toFixed(2));
 
 updateTotal();
 
-})
+});
 
 //Changing glass selection
 $('.glass').on('focus', function(){
@@ -69,7 +64,7 @@ e.preventDefault();
 previous = parseInt(previous);
 var currentPrice = $.trim($(this).closest('tr').find('.price').html()).substring(1);
 
-$(this).prop('selected', true)
+$(this).prop('selected', true);
 
 var price = $(this).val();
 if (isNaN(price)) {
@@ -107,7 +102,7 @@ $.ajax({ // create an AJAX call to update server cart...
 		   }
        });
 
-})
+});
 
 //Changing Frame selection
 $('.frame').on('focus', function(){
@@ -120,7 +115,7 @@ e.preventDefault();
 previous = parseInt(previous);
 var currentPrice = $.trim($(this).closest('tr').find('.price').html()).substring(1);
 
-$(this).prop('selected', true)
+$(this).prop('selected', true);
 
 var price = $(this).val();
 if (isNaN(price)) {
@@ -155,7 +150,7 @@ $.ajax({ // create an AJAX call...
        });
 
 
-})
+});
 
 //Changing Matt selection
 $('.matt').on('focus', function(){
@@ -167,7 +162,7 @@ e.preventDefault();
 previous = parseInt(previous);
 var currentPrice = $.trim($(this).closest('tr').find('.price').html()).substring(1);
 
-$(this).prop('selected', true)
+$(this).prop('selected', true);
 
 var price = $(this).val();
 if (isNaN(price)) {
@@ -202,7 +197,7 @@ $.ajax({ // create an AJAX call...
 		   }
        });
 
-})
+});
 
 //Changing painting qty
 $('.qty').on('focus', function(e){
@@ -215,7 +210,7 @@ $('.qty').on('change', function (e) {
 e.preventDefault();
 previous = parseInt(previous);
 
-$(this).prop('selected', true)
+$(this).prop('selected', true);
 
 var qty = $(this).val();
 if (isNaN(qty)) {
@@ -261,6 +256,9 @@ $.ajax({ // create an AJAX call...
 	   updateShipping();
 });
 
+//-----------------------------------------------------------------------------------------
+//         FUNCTION TO UPDATE SHIPPING PRICE IN CART
+//-----------------------------------------------------------------------------------------
 function updateShipping() {
 if (subtotal < 1500 && $('#shipping').value == 'standard') {
 shippingTotal = 25;

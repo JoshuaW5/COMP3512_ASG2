@@ -189,13 +189,13 @@ public function getPaintingBySubject($id){
 }
 
 public function getPaintingsBySubject($id){
-    $sql = $this->getSelect() . " JOIN PaintingSubjects USING (PaintingID) JOIN Subjects USING(SubjectID) WHERE SubjectID = ?";
+    $sql = $this->getSelect() . " JOIN PaintingSubjects USING (PaintingID) JOIN Subjects USING(SubjectID) WHERE SubjectID = ? ORDER BY Title";
     $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
     return $result;
 }
 public function getPaintingsByGallery($id){
 
-    $sql = $this->getSelect() . " JOIN Galleries USING (GalleryID) WHERE GalleryID = ? ";
+    $sql = $this->getSelect() . " JOIN Galleries USING (GalleryID) WHERE GalleryID = ? ORDER BY Title";
     $result = DBHelper::runQuery($this->getConnection(), $sql, Array($id));
     return $result;
 
